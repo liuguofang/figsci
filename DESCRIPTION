@@ -1,0 +1,10 @@
+Package: figsci
+Version: 0.0.0.2
+Date: 2017/10/09
+Title: Plotting barplot and scatterplot with statistical tests
+Authors@R: person("First", "Last", email = "liugf@ibcas.ac.cn", role = c("aut", "cre"))
+Description: The package can plot one-way or two-way barplots, scatterplots with different letters or r<sup>2</sup> and P-value representing statistically significant difference and other functions such as phylogenetic barplot, randomized block experiment layout, calendar tasks visulization, photo GPS points fetching ect.  
+Depends: R (>= 3.3.1)
+License:  GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
