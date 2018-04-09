@@ -20,4 +20,4 @@ d <- data.frame(period = c("2011-4 ~ 2011-4", "2011-5~2011-6", "2011-6~2011-7",
 
 plot.agenda(task=d,  period = 'period',item='item',text.cex = 1.5, month.cex = 1.5, text.left = FALSE) 
 
-![alt tag](http://url/to/agenda.jpg)
+![alt text](https://github.com/liuguofang/figsci/blob/master/agenda.jpg)
