@@ -10,9 +10,4 @@ This is a R package used to plotting a scatter plot annonated by statistical par
   library(figsci)
 ```
 
-```{R,results="hide",warning=FALSE,message = FALSE}
-plot.agenda(task=d,  period = 'period',item='item',text.cex = 1.5, month.cex = 1.5, text.left = FALSE) 
-```
 
-An agenda figure is shown as follows.
-![alt text](https://github.com/liuguofang/figsci/blob/master/agenda.jpg)
