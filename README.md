@@ -3,6 +3,8 @@ This is a R package used to plotting a scatter plot annonated by statistical par
 
 
   #install.packages("devtools")
+  
   devtools::install_github("liuguofang/figsci")
+  
   library(figsci)
   
