@@ -10,8 +10,8 @@ This is a R package used to plotting a scatter plot, one-way or two-way barplot 
   library(figsci)
 ```
 
-If it doesn't work, you can download the zip file (you will see the green button "clone or download." on top right place), unzipped it and the following worked.
+If it doesn't work, you downloaded the zip file (you will see the green button "clone or download." on top right place), unzipped it and the following worked.
 
 ```{R,results="hide",warning=FALSE,message = FALSE}
-devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master")
+devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please replace your own file path. 
 ```
