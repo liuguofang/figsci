@@ -10,4 +10,8 @@ This is a R package used to plotting a scatter plot annonated by statistical par
   library(figsci)
 ```
 
+If it doesn't work, you can download the zip file, unzipped it and the following worked.
 
+```{R,results="hide",warning=FALSE,message = FALSE}
+devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master")
+```
