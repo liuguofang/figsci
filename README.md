@@ -1,7 +1,7 @@
 ## figsci
-<Guofang Liu
+Guofang Liu
 
-This is a R package used to plotting a scatter plot, one-way or two-way barplot annonated by statistical parameter, visualizing phylogenetic barplot with its associated continuous variables, agenda plot, and randomized block experiment layout etc. 
+This is a R package used to plotting a scatter plot, one-way or two-way barplot annonated by statistical parameter, visualizing phylogenetic barplot with its associated continuous variables, agenda plot, and randomized block experiment layout, temperature and humidity curve based on data from ibutton equipment etc. 
 
 
 ```{R,results="hide",warning=FALSE,message = FALSE}
