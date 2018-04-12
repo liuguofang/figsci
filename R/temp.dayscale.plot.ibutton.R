@@ -21,5 +21,4 @@ temp.dayscale.plot.ibutton <- function(temp=temperature,humidity=NULL,start.time
 		 mtext(~Mean~relative~humidity~('%'),side = 2,line=2)
 	 }
 	 axis(1,at=time.pos,label=substr(time.pos,12,16),line=1) 
-	 dev.off()
- }
+}
