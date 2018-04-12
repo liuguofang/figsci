@@ -4,14 +4,8 @@
 #' This function can be used to plot humidity and temperature curve graph.
 #' @temp the name of temperature file.
 #' @humidity the name of humidity file. Default is drawing temperature curve across time. 
-#' @plot.filename the name of output plot. 
-#' @width the width of plot size. Default is 7 unit.
-#' @height the height of plot size. Default is 6 unit
-#' @res the resolution of the plot. Default is 300 DPI.
 
-temp.plot.ibutton <- function(temp=temperature,humidity=NULL,plot.filename = plot.filename,width =7,height = 6,res=300){
-	tiff(sprintf('%s(%s).tiff',plot.filename,Sys.Date()),width = width,height = height,
-			units = 'in', compression = 'lzw', res=res)
+temp.plot.ibutton <- function(temp=temperature,humidity=NULL){
 	if(!is.null(humidity))  layout(matrix(1:2,ncol=1))
 	sapply(c('dplyr','plyr'),library,character.only = TRUE)
 	temp.range <- temperature[,c("Value.max",'Value.min')] %>% each(max,min)()
