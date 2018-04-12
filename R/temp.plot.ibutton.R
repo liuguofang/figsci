@@ -34,5 +34,4 @@ temp.plot.ibutton <- function(temp=temperature,humidity=NULL){
 	year <- regmatches(temperature[,"day"],regexpr("[0-9]{4}",temperature[,"day"]))
 	year.pt <- as.Date(temperature[which(!duplicated(year)),'day'])
 	axis(1,at=year.pt,label=sprintf("\n\n%s",substr(year.pt,1,4)),line=2,col='white', tick=FALSE)
-	dev.off()
 }
