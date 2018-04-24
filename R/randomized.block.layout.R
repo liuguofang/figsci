@@ -7,7 +7,7 @@
 #' @treatment The number of treatments or treatment combinations 
 #' @outside The outer distance space for experiment setup
 #' @examples
-randomized.block.layout <- function(quadrat.side = 2, space = quadrat.side, block = 4, treatment = 9,outside=5,...) {
+randomized.block.layout <- function(code.matrix=NULL, quadrat.side = 2, space = quadrat.side, block = 4, treatment = 9,outside=5,...) {
 	
 	l <- quadrat.side*treatment + space*(treatment-1)
 	w <- quadrat.side*block + space*(block-1)
@@ -37,7 +37,9 @@ randomized.block.layout <- function(quadrat.side = 2, space = quadrat.side, bloc
 	
 	row.i <- seq(0, l, by = quadrat.side+space)+quadrat.side/2
 	col.j <- seq(0, w, by = quadrat.side+space)+quadrat.side/2
-	for(i in 1:length(col.j)) text(row.i,col.j[i], sample(1:treatment),col=ifelse(i %in% 1:ceiling(block/2),'white','black'),...)
+	for(i in length(col.j):1) 
+		if(is.null(code.matrix)) text(row.i,col.j[i], sample(1:treatment),col=ifelse(i %in% 1:ceiling(block/2),'white','black'),...) else 
+                  text(row.i,col.j[i],code.matrix[i,],col=ifelse(i %in% 1:ceiling(block/2),'white','black'),...)
 	
 	
 	
