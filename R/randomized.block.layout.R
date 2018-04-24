@@ -37,7 +37,7 @@ randomized.block.layout <- function(code.matrix=NULL, quadrat.side = 2, space = 
 	
 	row.i <- seq(0, l, by = quadrat.side+space)+quadrat.side/2
 	col.j <- seq(0, w, by = quadrat.side+space)+quadrat.side/2
-	for(i in length(col.j):1) 
+	for(i in 1:length(col.j)) 
 		if(is.null(code.matrix)) text(row.i,col.j[i], sample(1:treatment),col=ifelse(i %in% 1:ceiling(block/2),'white','black'),...) else 
                   text(row.i,col.j[i],code.matrix[i,],col=ifelse(i %in% 1:ceiling(block/2),'white','black'),...)
 	
