@@ -1,4 +1,4 @@
-#' A scatterplot.r2p function
+﻿#' A scatterplot.r2p function
 #' This function can be used drawing a scatterplot with or without category/group variable and add R2 and P-value for fitted regession lines automatically.
 #' @dat A data.frame 
 #' @x A variable in x axis
@@ -62,8 +62,9 @@ scatterplot.r2p <- function(dat,x = x,y = y,group = NULL, intercept=TRUE, color=
     lm.coef$lty <- ifelse(lm.coef$p<0.05,1,0)
     
     txt <- sapply(1:group.no,function(i) 
-      substitute(paste(R^2 == A, ifelse(lm.coef[i,'p']<0.001, italic(P) < B, italic(P)== B)), list(A = sprintf("%.2f, ", lm.coef[i,'r2']), 
-                                                                                                   B = ifelse(lm.coef[i,'p']<0.001, '0.001', sprintf("%.3f", lm.coef[i,'p'])))))
+      substitute(paste(ifelse(lm.coef[i,'r2']<0.01, R^2 < A, R^2 ==A), ifelse(lm.coef[i,'p']<0.001, italic(P) < B, italic(P)== B)), 
+          list(A = ifelse(lm.coef[i,'r2']<0.01, "0.01",sprintf("%.2f, ", lm.coef[i,'r2'])), 
+               B = ifelse(lm.coef[i,'p']<0.001, '0.001', sprintf("%.3f", lm.coef[i,'p'])))))
     
     
     levels(group) <- pty[1:group.no]
@@ -89,8 +90,14 @@ scatterplot.r2p <- function(dat,x = x,y = y,group = NULL, intercept=TRUE, color=
                           col=color[i], lty=lm.coef[i,'lty'])
       if(lm.coef[i,'p']<0.001) text(r2.p.pos$x[i]+ space,y=r2.p.pos$y[i] , substitute(paste(R^2 == A, italic(P) < B), 
                                                list(A = sprintf("%.2f, ",  lm.coef[i,'r2']), B = "0.001")),adj=0,cex=cex.size) else 
-         text(r2.p.pos$x[i]+ space,y=r2.p.pos$y[i] ,substitute(paste(R^2 == A, italic(P)== B),  list(A = sprintf("%.2f, ",  lm.coef[i,'r2']),
+      { if(lm.coef[i,"r2"]<0.01)
+         text(r2.p.pos$x[i]+ space,y=r2.p.pos$y[i] ,substitute(paste(R^2 < A, italic(P)== B),  
+                                                               list(A = "0.01, ",
+                                                        B = sprintf("%.3f", lm.coef[i,'p']))),adj=0,cex=cex.size) else 
+     text(r2.p.pos$x[i]+ space,y=r2.p.pos$y[i] ,substitute(paste(R^2 == A, italic(P)== B),  list(A = sprintf("%.2f, ",  lm.coef[i,'r2']),
                                                                            B = sprintf("%.3f", lm.coef[i,'p']))),adj=0,cex=cex.size)
+       }
+
       legend(r2.p.pos$x[i],y=r2.p.pos$y[i],legend=ifelse(level.off,'', group.string[i]),yjust=0.5,pch=pty[i],col=color[i],lty=lm.coef[i,'lty'],bty='n')
     })
     
