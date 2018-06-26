@@ -1,4 +1,4 @@
-﻿#' A scatterplot.r2p function
+#' A scatterplot.r2p function
 #' This function can be used drawing a scatterplot with or without category/group variable and add R2 and P-value for fitted regession lines automatically.
 #' @dat A data.frame 
 #' @x A variable in x axis
