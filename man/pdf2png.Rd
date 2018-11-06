@@ -17,7 +17,6 @@ This function can be used to transoform the cover page of pdf files into png fil
 
 \examples{
 
-pdf2png(pdf.pos = "D:/pdf",
-		pdftopng.pos ="D:/software/EXE/xpdfbin-win-3.04/bin64",resolution = 300)
+pdf2png(pdf.pos = "D:/pdf", pdftopng.pos ="D:/软件/EXE/xpdfbin-win-3.04/bin64",resolution = 300)
 
 }
