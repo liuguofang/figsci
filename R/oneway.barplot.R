@@ -18,5 +18,6 @@ oneway.barplot <- function(data = data, response = response, x.factor = x.factor
 	out<-get(method)(model, "x.factor",alpha=alpha)
 
 	text(para$xvals[, 1], para$CI[2, 1, ],out$groups[levels(x.factor),'groups'],pos = 3)
+	return(para)
 }
 
