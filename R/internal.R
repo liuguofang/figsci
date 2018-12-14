@@ -1,3 +1,4 @@
+## internal functions 
 
 sci.search <- function(dat = sci,journal,type=NULL,IF5.threshold=NULL,yr=NULL){
 
