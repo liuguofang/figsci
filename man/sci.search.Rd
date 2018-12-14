@@ -19,8 +19,7 @@ This function can be used to search journal or influence factors from a local da
 
 \examples{
 
-setwd("E:/3 Word PPT材料/科学写作帮助/SCI期刊影响因子等信息")
-sci <- read.csv("2012-2018JCR.csv")
+data(sci)
 sci.search(sci, journal = 'plos one',yr = 2018)
 sci.search(dat = sci,journal= "^science of (.*?)ent$")
 sci.search(dat = sci,journal= "^nature")
