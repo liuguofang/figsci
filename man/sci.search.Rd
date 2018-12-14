@@ -2,7 +2,7 @@
 \alias{sci.search}
 \title{Search journal or influence factors from a local database}
 \usage{
-sci.search(dat = sci,journal,type=NULL,IF5.threshold=NULL,yr=NULL)
+sci.search(dat = sci,journal = NULL,type = NULL,IF5.threshold = NULL,yr = NULL)
 }
 \description{
 This function can be used to search journal or influence factors from a local database.
