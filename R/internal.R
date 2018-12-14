@@ -9,10 +9,11 @@ sci.search <- function(dat = sci,journal,type=NULL,IF5.threshold=NULL,yr=NULL){
     pos <- unlist(lapply(1:length(journal),
               function(x) grep(tolower(journal[x]),tolower(dat$Full.Journal.Title))))
     case <- dat[pos,]
-    if(!is.null(IF5.threshold)) 
+    if(!is.null(IF5.threshold)) {
         options(warn=-1)
         case <- case[as.numeric(as.character(case$IF5))>IF5.threshold,]
         options(warn=0)
+        }
     case <- subset(case,!is.na(Rank))
     if(!is.null(yr))                         
         case[with(case,year %in% yr),] else case                         
