@@ -24,12 +24,12 @@ The function could be used as building PPT slide supported by latex running.
 
 figure.slide(frametitle='litter quality affects soil N',
               figure.fold='E:/paperfigs',
-              font.size='\\tiny',
+              font.size='\\\\tiny',
               layout=c(0.45,0.55),
               width=c(5,5),
               fig.name=c("Carrillo_et_al_2011_fig1.pdf","Carrillo_et_al_2011_fig2.pdf"),
               caption.text=c('Mean daily nitrogen mineralization rates','Relationships between N mineralization or immobilization rates with litter quality parameters'),
-              footnote='(Carrillo et al 2011 SBB)'
+              footnote='Carrillo et al 2011 SBB'
               )
               
 }
