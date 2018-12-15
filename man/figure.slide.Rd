@@ -23,6 +23,7 @@ The function could be used as building PPT slide supported by latex running.
 \examples{
 
 figure.slide(frametitle='litter quality affects soil N',
+              figure.fold='E:/paperfigs',
               font.size='\\tiny',
               layout=c(0.45,0.55),
               width=c(5,5),
