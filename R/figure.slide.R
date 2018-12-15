@@ -9,8 +9,8 @@
 #' @caption.text the caption of figure(s).
 #' @footnote add a refence.
 
-figure.slide <- function(topdown=FALSE, frametitle,figure.fold = 'E:/paperfigs',font.size="\\normalsize",
-                          layout=c(0.5,0.5),width=c(5,5),fig.name, caption.text,footnote){
+figure.slide <- function(topdown=FALSE, frametitle,figure.fold, font.size="\\normalsize",
+                          layout=c(0.5,0.5), width = c(5, 5), fig.name, caption.text, footnote){
     cat("\\begin{frame}\n")
     cat(sprintf("  \\frametitle{%s}\n",frametitle))
     cat(sprintf("   %s\n",font.size))
