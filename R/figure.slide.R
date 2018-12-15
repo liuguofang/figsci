@@ -14,6 +14,8 @@ figure.slide <- function(topdown=FALSE, frametitle,figure.fold, font.size="\\nor
     cat("\\begin{frame}\n")
     cat(sprintf("  \\frametitle{%s}\n",frametitle))
     cat(sprintf("   %s\n",font.size))
+    
+    cat("\\begin{figure}\n")
     if(!topdown)     cat("    \\begin{columns}\n")
     for(i in 1:length(layout)){
         if(!topdown)    cat(sprintf("        \\column{%s\\textwidth}\n",layout[i]))
@@ -24,6 +26,7 @@ figure.slide <- function(topdown=FALSE, frametitle,figure.fold, font.size="\\nor
         cat("        \\end{center}\n")
     }
     if(!topdown) cat("    \\end{columns}\n")
+    cat("\\end{figure}\n")
     cat(sprintf("    \\footnote{(%s)}\n",footnote))
 
     cat("\\end{frame}\n")
