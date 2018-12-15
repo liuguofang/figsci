@@ -1,8 +1,8 @@
-#' item.slide building a slide including multiple items.
-#' frametitle title of slide.
-#' font.size font size. default is normalsize.
-#' item.text a vectors of multiple items
-#' footnote add a refence as footnote.
+#' An item.slide function building a slide including multiple items.
+#' @frametitle title of slide.
+#' @font.size font size. default is normalsize.
+#' @item.text a vectors of multiple items
+#' @footnote add a refence as footnote.
 
 
 item.slide <- function(frametitle,font.size="\\normalsize",item.text, footnote){
