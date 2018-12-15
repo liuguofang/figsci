@@ -1,4 +1,4 @@
-#' A figure.slides function
+#' A figure.slide function
 #' This function can be used to build PPT slide based on Latex software.
 #' @topdown valid when two figures are shown. default is left-right layout, top-down layout if it is TRUE. 
 #' @frametitle title of slide.
