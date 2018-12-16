@@ -16,6 +16,16 @@ If it doesn't work, you downloaded the zip file (you will see the green button "
 devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please replace your own file path. 
 ```
 
+The scatterplot.r2p function can make a scatterplot with R^2 and p value for ordinary linear regressions.
+```r
+data(leaflife,package='smatr')
+scatterplot.r2p(dat=leaflife,x='longev',y='lma',group='soilp',pty=c(1,19),xlab=Leaf~longevity~(yr),ylab=~LMA~(kg~m^-2))
+```
+
+![](readme_files/scatterplot.jpg) 
+
+
+
 `sci.search` could carrry out searching journal(s) based regular expression.
 
 ```r
