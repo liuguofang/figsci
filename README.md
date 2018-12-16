@@ -19,5 +19,5 @@ devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please repl
 ```{R,results="hide",warning=FALSE,message = FALSE}
 sci.search(journal='^ecology$',yr=2018)
       Rank Full.Journal.Title JCR.Abbreviated.Title      ISSN Total.Cites   IF2   IF5 Eigenfactor.Score year Soil Ecology Plant Bio.Conservatation Environment
-22530 1019            ECOLOGY               ECOLOGY 0012-9658      60,825 4.617 5.677           0.04415 2018      ecology                   ```
+22530 1019            ECOLOGY               ECOLOGY 0012-9658      60,825 4.617 5.677           0.04415 2018      ecology           
               
