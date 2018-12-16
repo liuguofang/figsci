@@ -18,7 +18,7 @@ devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please repl
 
 sci.search could carrry out searching journal(s) based regular expression.
 ```{R,results="hide",warning=FALSE,message = FALSE}
-unique(sci.search(journal=c('^ecology$','^journal of ecology','Functional ec(.*?)gy','journal of applied ecology','^sustainability$','plos one','scientific reports'),yr=2018))
+sci.search(journal=c('^ecology$','^journal of ecology','Functional ec(.*?)gy','journal of applied ecology','^sustainability$','plos one','scientific reports'),yr=2018)
       Rank         Full.Journal.Title JCR.Abbreviated.Title      ISSN Total.Cites   IF2   IF5 Eigenfactor.Score year Soil Ecology Plant      Bio.Conservatation Environment
 22530 1019                    ECOLOGY               ECOLOGY 0012-9658      60,825 4.617 5.677           0.04415 2018      ecology                                          
 44421  807         JOURNAL OF ECOLOGY                J ECOL 0022-0477      18,409 5.172 6.525           0.02482 2018      ecology plant                                    
