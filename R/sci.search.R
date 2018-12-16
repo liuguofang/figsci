@@ -1,4 +1,3 @@
-## internal functions 
 
 sci.search <- function(dat = sci,journal=NULL,type=NULL,IF5.threshold=NULL,yr=NULL){
     sci <- unique(sci)
