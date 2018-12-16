@@ -1,7 +1,7 @@
 ## internal functions 
 
 sci.search <- function(dat = sci,journal=NULL,type=NULL,IF5.threshold=NULL,yr=NULL){
-
+    sci <- unique(sci)
     if(!is.null(type)) {
         dat <-  subset(dat,get(type)!='')
         type <- paste0(toupper(substr(type,1,1)),substr(type,2,nchar(type)))
