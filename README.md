@@ -19,7 +19,8 @@ devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please repl
 The `scatterplot.r2p` function can make a scatterplot with R<sup>2</sup> and p value for ordinary linear regressions.
 ```r
 data(leaflife,package='smatr')
-scatterplot.r2p(dat=leaflife,x='longev',y='lma',group='soilp',pty=c(1,19),xlab=Leaf~longevity~(yr),ylab=~LMA~(kg~m^-2))
+scatterplot.r2p(dat=leaflife,x='longev',y='lma',group='soilp',pty=c(1,19),
+                xlab=Leaf~longevity~(yr),ylab=~LMA~(kg~m^-2))
 ```
 
 ![](readme_files/scatterplot.jpg) 
