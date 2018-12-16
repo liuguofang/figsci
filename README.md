@@ -19,9 +19,11 @@ devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please repl
 `sci.search` could carrry out searching journal(s) based regular expression.
 
 ```r
-sci.search(journal=c('^ecology$','^journal of ecology','Functional ec(.*?)gy','journal of applied ecology','^sustainability$','plos one','scientific reports'),yr=2018)
+sci.search(journal=c('^ecology$','^journal of ecology','Functional ec(.*?)gy','journal of applied ecology',
+'^sustainability$','plos one','scientific reports'),yr=2018)
 ```
 
+```r
       Rank         Full.Journal.Title JCR.Abbreviated.Title      ISSN Total.Cites   IF2   IF5 Eigenfactor.Score year Soil Ecology Plant      Bio.Conservatation Environment
 22530 1019                    ECOLOGY               ECOLOGY 0012-9658      60,825 4.617 5.677           0.04415 2018      ecology                                          
 44421  807         JOURNAL OF ECOLOGY                J ECOL 0022-0477      18,409 5.172 6.525           0.02482 2018      ecology plant                                    
@@ -29,4 +31,5 @@ sci.search(journal=c('^ecology$','^journal of ecology','Functional ec(.*?)gy','j
 41305  658 JOURNAL OF APPLIED ECOLOGY           J APPL ECOL 0021-8901      18,142 5.742 6.160           0.02282 2018      ecology                                          
 77792 4599             Sustainability  SUSTAINABILITY-BASEL 2071-1050       8,904 2.075 2.177           0.01377 2018                                            environment
 67415 2975                   PLoS One              PLOS ONE 1932-6203     582,877 2.766 3.352           1.86235 2018                    Biological Conservation            
-74403 1308         Scientific Reports            SCI REP-UK 2045-2322     192,841 4.122 4.609           0.71896 2018                                                       
+74403 1308         Scientific Reports            SCI REP-UK 2045-2322     192,841 4.122 4.609           0.71896 2018                    
+```
