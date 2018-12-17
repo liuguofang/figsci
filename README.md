@@ -30,71 +30,88 @@ scatterplot.r2p(dat=leaflife,x='longev',y='lma',group='soilp',pty=c(1,19),
 The function `sci.search` could carrry out searching journal(s) based regular expression. Therefore, it is more efficient to search Journal compared with using excel.
 
 ```r
-sci.search(journal=c('^ecology$','^journal of ecology','Functional ec(.*?)gy','journal of applied ecology',
-                      'new phyto','land degradation','^nature','proceedings of the (.*?) america',"^science$",
-                    '^sustainability$','plos one','scientific reports'),yr=2018)
+journal <- c("^AMERICAN NATURALIST$", "^ANALYTICAL CHEMISTRY$", "^ANNALS OF BOTANY$", 
+"^BIOCHIMICA ET BIOPHYSICA ACTA-BIOENERGETICS$", "^BIOSCIENCE$", 
+"^BMC BIOLOGY$", "^BMC EVOLUTIONARY BIOLOGY$", "^CELL REPORTS$", 
+"^CLADISTICS$", "^CLIMATIC CHANGE$", "^DIVERSITY AND DISTRIBUTIONS$", 
+"^ECOGRAPHY$", "^ECOLOGICAL APPLICATIONS$", "^ECOLOGY$", "^EMBO REPORTS$", 
+"^EVOLUTION$", "^FOOD CHEMISTRY$", "^FRONTIERS IN ECOLOGY AND THE ENVIRONMENT$", 
+"^FUNCTIONAL ECOLOGY$", "^GENETICS$", "^GENOME BIOLOGY AND EVOLUTION$", 
+"^GLOBAL BIOGEOCHEMICAL CYCLES$", "^GLOBAL CHANGE BIOLOGY$", 
+"^GLOBAL ECOLOGY AND BIOGEOGRAPHY$", "^JOURNAL OF BIOGEOGRAPHY$", 
+"^JOURNAL OF BIOLOGICAL CHEMISTRY$", "^JOURNAL OF ECOLOGY$", 
+"^JOURNAL OF EXPERIMENTAL BOTANY$", "^JOURNAL OF GEOPHYSICAL RESEARCH", 
+"^JOURNAL OF PROTEOME RESEARCH$", "^MOLECULAR ECOLOGY$", "^MOLECULAR PHYLOGENETICS AND EVOLUTION$", 
+"^MOLECULAR PLANT-MICROBE INTERACTIONS$", "^NEW PHYTOLOGIST$", 
+"^NUCLEIC ACIDS RESEARCH$", "^PHOTOSYNTHESIS RESEARCH$", "^PLANT AND CELL PHYSIOLOGY$", 
+"^PLANT BIOTECHNOLOGY JOURNAL$", "^PLANT CELL AND ENVIRONMENT$", 
+"^PLANT JOURNAL$", "^PLANT MOLECULAR BIOLOGY$", "^PLANT PHYSIOLOGY$", 
+"^PLOS GENETICS$", "^POSTHARVEST BIOLOGY AND TECHNOLOGY$", "^PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES$", 
+"^REMOTE SENSING OF ENVIRONMENT$", "^SCIENCE SIGNALING$", "^SOIL BIOLOGY & BIOCHEMISTRY$", 
+"^TAXON$", "^THEORETICAL AND APPLIED GENETICS$")
+
+library(figsci)
+sci.search(journal=journal,yr=2018)
+
 ```
 
 ```r
-                                                                   Full.Journal.Title JCR.Abbreviated.Title      ISSN Total.Cites           IF2           IF5
-22530                                                                         ECOLOGY               ECOLOGY 0012-9658      60,825         4.617         5.677
-44421                                                              JOURNAL OF ECOLOGY                J ECOL 0022-0477      18,409         5.172         6.525
-28813                                                              FUNCTIONAL ECOLOGY            FUNCT ECOL 0269-8463      14,638         5.491         5.657
-41305                                                      JOURNAL OF APPLIED ECOLOGY           J APPL ECOL 0021-8901      18,142         5.742         6.160
-62480                                                                 NEW PHYTOLOGIST            NEW PHYTOL 0028-646X      44,994         7.433         7.833
-55935                                                  LAND DEGRADATION & DEVELOPMENT       LAND DEGRAD DEV 1085-3278       4,655         7.270         6.564
-61175                                                                          NATURE                NATURE 0028-0836     710,766        41.577        44.958
-61184                                                                Nature + Culture              NAT CULT 1558-6073         307         0.645         2.513
-61189                                                                Nature Astronomy            NAT ASTRON 2397-3366         322 Not Available Not Available
-61190                                                   Nature Biomedical Engineering        NAT BIOMED ENG 2157-846X         341 Not Available Not Available
-61192                                                            NATURE BIOTECHNOLOGY        NAT BIOTECHNOL 1087-0156      57,510        35.724        43.271
-61199                                                             NATURE CELL BIOLOGY         NAT CELL BIOL 1465-7392      39,896        19.064        20.460
-61206                                                         Nature Chemical Biology         NAT CHEM BIOL 1552-4450      19,562        13.843        13.990
-61212                                                                Nature Chemistry              NAT CHEM 1755-4330      29,548        26.201        28.790
-61220                                                           Nature Climate Change       NAT CLIM CHANGE 1758-678X      17,986        19.181        22.363
-61239                                                           Nature Communications            NAT COMMUN 2041-1723     178,348        12.353        13.691
-61247                                                    Nature Conservation-Bulgaria  NAT CONSERV-BULGARIA 1314-6947         175         1.367         1.910
-61249                                                      Nature Ecology & Evolution         NAT ECOL EVOL 2397-334X         596 Not Available Not Available
-61251                                                                   Nature Energy            NAT ENERGY 2058-7546       5,072        46.859        46.870
-61253                                                                 NATURE GENETICS             NAT GENET 1061-4036      93,639        27.125        31.154
-61259                                                               Nature Geoscience            NAT GEOSCI 1752-0894      20,386        14.391        14.846
-61267                                                               NATURE IMMUNOLOGY           NAT IMMUNOL 1529-2908      41,410        21.809        21.974
-61273                                                                NATURE MATERIALS             NAT MATER 1476-1122      92,291        39.235        47.534
-61280                                                                 NATURE MEDICINE               NAT MED 1078-8956      75,461        32.621        33.409
-61287                                                                  NATURE METHODS           NAT METHODS 1548-7091      54,686        26.919        41.934
-61295                                                             Nature Microbiology         NAT MICROBIOL 2058-5276       2,510        14.174        14.182
-61296                                                           Nature Nanotechnology       NAT NANOTECHNOL 1748-3387      57,369        37.490        45.815
-61303                                                             NATURE NEUROSCIENCE          NAT NEUROSCI 1097-6256      59,426        19.912        19.188
-61311                                                                Nature Photonics         NAT PHOTONICS 1749-4885      39,331        32.521        38.551
-61318                                                                  Nature Physics              NAT PHYS 1745-2473      33,233        22.727        22.610
-61325                                                                   Nature Plants            NAT PLANTS 2055-026X       2,284        11.471        11.471
-61327                                                                Nature Protocols            NAT PROTOC 1754-2189      36,821        12.423        15.269
-61334                                                           NATURE REVIEWS CANCER        NAT REV CANCER 1474-175X      50,407        42.784        50.293
-61341                                                       Nature Reviews Cardiology       NAT REV CARDIOL 1759-5002       5,228        15.162        13.249
-61348                                                        Nature Reviews Chemistry          NAT REV CHEM 2397-3358         282 Not Available Not Available
-61349                                                Nature Reviews Clinical Oncology    NAT REV CLIN ONCOL 1759-4774       8,354        24.653        20.605
-61357                                                  Nature Reviews Disease Primers   NAT REV DIS PRIMERS 2056-676X       1,559        16.071        16.155
-61358                                                   NATURE REVIEWS DRUG DISCOVERY   NAT REV DRUG DISCOV 1474-1776      31,312        50.167        54.490
-61365                                                    Nature Reviews Endocrinology    NAT REV ENDOCRINOL 1759-5029       7,377        20.265        19.244
-61372                                    Nature Reviews Gastroenterology & Hepatology  NAT REV GASTRO HEPAT 1759-5045       6,686        16.990        16.533
-61379                                                         NATURE REVIEWS GENETICS         NAT REV GENET 1471-0056      35,680        41.465        44.913
-61386                                                       NATURE REVIEWS IMMUNOLOGY       NAT REV IMMUNOL 1474-1733      39,215        41.982        46.507
-61393                                                        Nature Reviews Materials         NAT REV MATER 2058-8437       3,218        51.941        51.941
-61394                                                     NATURE REVIEWS MICROBIOLOGY     NAT REV MICROBIOL 1740-1526      26,627        31.851        31.155
-61401                                           NATURE REVIEWS MOLECULAR CELL BIOLOGY  NAT REV MOL CELL BIO 1471-0072      43,667        35.612        47.918
-61408                                                       Nature Reviews Nephrology       NAT REV NEPHROL 1759-5061       4,668        14.101        12.170
-61415                                                        Nature Reviews Neurology        NAT REV NEUROL 1759-4758       8,095        19.819        20.888
-61422                                                     NATURE REVIEWS NEUROSCIENCE      NAT REV NEUROSCI 1471-003X      40,834        32.635        38.691
-61429                                                     Nature Reviews Rheumatology     NAT REV RHEUMATOL 1759-4790       6,584        15.661        14.358
-61436                                                          Nature Reviews Urology          NAT REV UROL 1759-4812       2,966         8.089         7.335
-61443                                           NATURE STRUCTURAL & MOLECULAR BIOLOGY   NAT STRUCT MOL BIOL 1545-9993      27,547        13.333        12.816
-61451                                                          Natureza & Conservacao       NAT CONSERVACAO 1679-0073         433         2.766         2.532
-68706 PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA   P NATL ACAD SCI USA 0027-8424     637,268         9.504        10.359
-74079                                                                         SCIENCE               SCIENCE 0036-8075     645,132        41.058        40.627
-77792                                                                  Sustainability  SUSTAINABILITY-BASEL 2071-1050       8,904         2.075         2.177
-67415                                                                        PLoS One              PLOS ONE 1932-6203     582,877         2.766         3.352
-74403                                                              Scientific Reports            SCI REP-UK 2045-2322     192,841         4.122         4.609
- 
-	
+                                          Full.Journal.Title JCR.Abbreviated.Title      ISSN Total.Cites    IF2    IF5 year
+4410                                     AMERICAN NATURALIST                AM NAT 0003-0147      29,269  4.265  4.330 2018
+4714                                    ANALYTICAL CHEMISTRY             ANAL CHEM 0003-2700     123,665  6.042  6.035 2018
+5241                                        ANNALS OF BOTANY        ANN BOT-LONDON 0305-7364      19,918  3.646  4.246 2018
+10121            BIOCHIMICA ET BIOPHYSICA ACTA-BIOENERGETICS     BBA-BIOENERGETICS 0005-2728      11,931  4.280  4.785 2018
+10942                                             BIOSCIENCE            BIOSCIENCE 0006-3568      17,072  5.876  6.708 2018
+11320                                            BMC BIOLOGY              BMC BIOL 1741-7007       5,144  5.770  7.436 2018
+11387                               BMC EVOLUTIONARY BIOLOGY         BMC EVOL BIOL 1471-2148      12,388  3.027  3.628 2018
+14506                                           Cell Reports              CELL REP 2211-1247      29,789  8.032  8.700 2018
+16168                                             CLADISTICS            CLADISTICS 0748-3007       3,775  5.877  5.594 2018
+16266                                        CLIMATIC CHANGE       CLIMATIC CHANGE 0165-0009      18,223  3.537  4.436 2018
+21766                            DIVERSITY AND DISTRIBUTIONS        DIVERS DISTRIB 1366-9516       7,404  4.614  4.777 2018
+22414                                              ECOGRAPHY             ECOGRAPHY 0906-7590      10,103  4.520  5.617 2018
+22437                                ECOLOGICAL APPLICATIONS             ECOL APPL 1051-0761      20,577  4.393  4.892 2018
+22530                                                ECOLOGY               ECOLOGY 0012-9658      60,825  4.617  5.677 2018
+23482                                           EMBO REPORTS              EMBO REP 1469-221X      13,293  8.749  9.127 2018
+26613                                              EVOLUTION             EVOLUTION 0014-3820      32,227  3.818  4.268 2018
+28075                                         FOOD CHEMISTRY             FOOD CHEM 0308-8146      90,665  4.946  4.879 2018
+28588               FRONTIERS IN ECOLOGY AND THE ENVIRONMENT    FRONT ECOL ENVIRON 1540-9295       9,137  8.302 10.898 2018
+28813                                     FUNCTIONAL ECOLOGY            FUNCT ECOL 0269-8463      14,638  5.491  5.657 2018
+29384                                               GENETICS              GENETICS 0016-6731      42,809  4.075  5.076 2018
+29458                           Genome Biology and Evolution      GENOME BIOL EVOL 1759-6653       5,746  3.940  4.171 2018
+30226                           GLOBAL BIOGEOCHEMICAL CYCLES  GLOBAL BIOGEOCHEM CY 0886-6236      13,353  4.457  5.203 2018
+30233                                  GLOBAL CHANGE BIOLOGY    GLOBAL CHANGE BIOL 1354-1013      36,182  8.997  9.791 2018
+30248                        GLOBAL ECOLOGY AND BIOGEOGRAPHY  GLOBAL ECOL BIOGEOGR 1466-822X      10,294  5.958  7.315 2018
+41967                                JOURNAL OF BIOGEOGRAPHY            J BIOGEOGR 0305-0270      15,146  4.154  4.885 2018
+41979                        JOURNAL OF BIOLOGICAL CHEMISTRY           J BIOL CHEM 0021-9258     366,247  4.010  4.253 2018
+44421                                     JOURNAL OF ECOLOGY                J ECOL 0022-0477      18,409  5.172  6.525 2018
+45389                         JOURNAL OF EXPERIMENTAL BOTANY             J EXP BOT 0022-0957      40,585  5.354  6.044 2018
+46266            JOURNAL OF GEOPHYSICAL RESEARCH-ATMOSPHERES   J GEOPHYS RES-ATMOS 2169-897X      63,717  3.380  4.136 2018
+46268         Journal of Geophysical Research-Biogeosciences  J GEOPHYS RES-BIOGEO 2169-8953       7,085  3.484  4.217 2018
+46270          JOURNAL OF GEOPHYSICAL RESEARCH-EARTH SURFACE   J GEOPHYS RES-EARTH 2169-9003       6,791  3.337  4.118 2018
+46272                 JOURNAL OF GEOPHYSICAL RESEARCH-OCEANS  J GEOPHYS RES-OCEANS 2169-9275      30,649  2.711  3.207 2018
+46274                JOURNAL OF GEOPHYSICAL RESEARCH-PLANETS  J GEOPHYS RES-PLANET 2169-9097       9,281  3.544  3.706 2018
+46276            JOURNAL OF GEOPHYSICAL RESEARCH-SOLID EARTH  J GEOPHYS RES-SOL EA 2169-9313      43,855  3.482  4.101 2018
+46278          JOURNAL OF GEOPHYSICAL RESEARCH-SPACE PHYSICS   J GEOPHYS RES-SPACE 2169-9380      36,438  2.752  2.720 2018
+51371                           JOURNAL OF PROTEOME RESEARCH        J PROTEOME RES 1535-3893      21,459  3.950  4.033 2018
+60233                                      MOLECULAR ECOLOGY              MOL ECOL 0962-1083      37,813  6.131  6.885 2018
+60402                  MOLECULAR PHYLOGENETICS AND EVOLUTION   MOL PHYLOGENET EVOL 1055-7903      18,604  4.412  4.294 2018
+60430                   MOLECULAR PLANT-MICROBE INTERACTIONS  MOL PLANT MICROBE IN 0894-0282      10,099  3.588  4.078 2018
+62480                                        NEW PHYTOLOGIST            NEW PHYTOL 0028-646X      44,994  7.433  7.833 2018
+63105                                 NUCLEIC ACIDS RESEARCH     NUCLEIC ACIDS RES 0305-1048     168,962 11.561 10.235 2018
+66343                                PHOTOSYNTHESIS RESEARCH        PHOTOSYNTH RES 0166-8595       6,396  3.091  3.480 2018
+67031                              PLANT AND CELL PHYSIOLOGY    PLANT CELL PHYSIOL 0032-0781      14,544  4.059  4.454 2018
+67065                            PLANT BIOTECHNOLOGY JOURNAL    PLANT BIOTECHNOL J 1467-7644       6,544  6.305  6.107 2018
+67093                             PLANT CELL AND ENVIRONMENT    PLANT CELL ENVIRON 0140-7791      20,478  5.415  6.151 2018
+67168                                          PLANT JOURNAL               PLANT J 0960-7412      39,212  5.775  6.101 2018
+67182                                PLANT MOLECULAR BIOLOGY        PLANT MOL BIOL 0167-4412      13,723  3.543  4.013 2018
+67213                                       PLANT PHYSIOLOGY         PLANT PHYSIOL 0032-0889      75,249  5.949  6.620 2018
+67394                                          PLoS Genetics            PLOS GENET 1553-7404      42,988  5.540  6.684 2018
+68075                     POSTHARVEST BIOLOGY AND TECHNOLOGY  POSTHARVEST BIOL TEC 0925-5214       9,642  3.112  3.241 2018
+68733 PROCEEDINGS OF THE ROYAL SOCIETY B-BIOLOGICAL SCIENCES  P ROY SOC B-BIOL SCI 0962-8452      51,704  4.847  5.611 2018
+71239                          REMOTE SENSING OF ENVIRONMENT   REMOTE SENS ENVIRON 0034-4257      44,168  6.457  7.737 2018
+74307                                      Science Signaling            SCI SIGNAL 1945-0877      10,316  6.378  7.251 2018
+76071                            SOIL BIOLOGY & BIOCHEMISTRY     SOIL BIOL BIOCHEM 0038-0717      32,573  4.926  5.419 2018
+78121                                                  TAXON                 TAXON 0040-0262       5,081  2.680  2.964 2018
+78561                       THEORETICAL AND APPLIED GENETICS      THEOR APPL GENET 0040-5752      19,565  3.930  4.062 2018
 
 ```
