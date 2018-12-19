@@ -28,8 +28,6 @@ tre <- ape::read.tree("ex.tre")
 
 tre$tip.label <- paste(substr(tre$tip.label,1,1), substr(tre$tip.label,2,100), sep='')
 
-N = length(tre$tip.label)
-
 # traits mean
 set.seed(1)
 traits <- data.frame(species = tre$tip.label, trt1 = runif(N, 0, 1), trt2 = runif(N, 
