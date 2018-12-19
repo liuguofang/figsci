@@ -21,7 +21,7 @@ phylo.barplot=function(phylo,dat,SE=NULL,var.lab=NULL, ...){
 		y02 <- grconvertY(y0, from = "npc", to = "user")
 		change <- diff(grconvertY(0:1, "npc")) * 0.005 # can modulate bar thickness
 		
-		for (j in 1:N) rect(0, y02[j] - change, value[j], y02[j] + change, col = "blue")
+		for (j in 1:nrow(dat)) rect(0, y02[j] - change, value[j], y02[j] + change, col = "blue")
 		if(!is.null(SE))
 			arrows(value - value.se, y02, value + value.se, y02, code = 3, length = 0.02, angle = 90)
 		axis(1, tcl = 0.5, line = -0.5)
