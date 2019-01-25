@@ -115,3 +115,5 @@ sci.search(journal=journal,yr=2018)
 78561                       THEORETICAL AND APPLIED GENETICS      THEOR APPL GENET 0040-5752      19,565  3.930  4.062 2018
 
 ```
+
+<iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
