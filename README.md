@@ -116,4 +116,3 @@ sci.search(journal=journal,yr=2018)
 
 ```
 
-<iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
