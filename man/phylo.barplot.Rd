@@ -24,7 +24,8 @@ tre = "(((((((((salix_psammophila,salix_cheilophila)salix,populus_alba)salicacea
 
 cat(tre, file = "ex.tre", sep = "\n")
 tre <- ape::read.tree("ex.tre")
-				
+
+N <- length(tre$tip.label)
 
 tre$tip.label <- paste(substr(tre$tip.label,1,1), substr(tre$tip.label,2,100), sep='')
 
