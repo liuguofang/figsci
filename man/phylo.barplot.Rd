@@ -22,8 +22,9 @@ The function could be used as plotting a phylogenetic tree and associated with b
 \examples{
 tre = "(((((((((salix_psammophila,salix_cheilophila)salix,populus_alba)salicaceae,(((((((hedysarum_leave,caragana_korshinskii),astragalus_adsurgens),glycyrrhiza_uralensis)irlc,lespedeza_davurica),thermopsis_lanceolata),radix_polygalae),((hippophae_rhamnoides,ulmus_pumila),potentilla_longifolia)rosales)),erodium_stephanianum),((((chenopodium_glaucum,agriophyllum_squarrosum,corispermum_hyssopifolium,amaranthus_retroflexus)amaranthaceae,(melandrium_apricum,stellaria_media)caryophyllaceae),(polygonum_hydropiper,Atraphaxis_bracteata_var._latifolia)polygonaceae)caryophyllales,((((echinops_gmelini,(artemisia_mongolica,artemisia_ordosica)artemisia),carpesium_abrotanoides,mulgedium_tataricum,saussurea_amara,heteropappus_altaicus)asteraceae,ferula_borealis),((((thymus_mongolicus,dracocephalum_moldavica),incarvillea_sinensis),convolvulus_arvensis),tournefortia_sibirica,(cynanchum_chinense,cynanchum_komarovii)cynanchum)))),thalictrum_squarrosum)eudicots,(setaria_viridis,(stipa_krylovii,(phragmites_australis,pennisetum_centrasiaticum)),calamagrostis_adans,psammochloa_villosa,cleistogenes_squarrosa,leymus_secalinus,achnatherum_sibiricum)poaceae)poales_to_asterales,((sabina_vulgaris,pinus_sylvestnis_var._mongolica)pinales,ephedra_sinica))seedplants,equisetum_ramosissimum)euphyllophyte;"
 
+library(ape)
 cat(tre, file = "ex.tre", sep = "\n")
-tre <- ape::read.tree("ex.tre")
+tre <- read.tree("ex.tre")
 
 N <- length(tre$tip.label)
 
