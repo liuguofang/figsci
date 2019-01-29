@@ -21,6 +21,7 @@ The function could be used as plotting a phylogenetic tree and associated with b
 
 \examples{
 
+library(ape)
 tre
 N <- length(tre$tip.label)
 
