@@ -9,7 +9,7 @@
 #' @maximum  Which is used to modify visualtion on significant letters in figure. 
 #' @export
 #' @examples
-twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,
+twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,legend=TRUE,
                           legend.pos='topright',group.name=group, ...) {
   library(sciplot)
   library(doBy)
@@ -47,6 +47,7 @@ twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", grou
   sig.letters=matrix(paste0(matrix(lett.group),matrix(lett.xfactor)),ncol=length(x.factor.level))
   for (i in 1:length(x.factor.level)) 
     text(para$xvals[, i], para$CI[2, , i] + par("usr")[4] * 0.03, sig.letters[, i]) 
+  if(legend)
   legend(legend.pos,legend =c(group.name,group.level),pch=c(NA,rep(22,length(group.level))),pt.bg=c(NA,gray.colors(length(group.level))),...)
   }
 
