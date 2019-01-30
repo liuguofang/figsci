@@ -2,7 +2,7 @@
 \alias{data2excel}
 \title{Save data with data.frame structure into Excel file}
 \usage{
-data2excel(data, filename, sheetname, create =TRUE)
+data2excel(data, filename, sheetname, create =TRUE, ...)
 }
 \description{
 The function could be used as saving R data into  Excel. 
@@ -12,6 +12,7 @@ The function could be used as saving R data into  Excel.
 	\item{filename} {file name on an excel output.}
 	\item{sheetname} {sheet name for an excel output.}
 	\item{create} {whether create an excel or not.}
+	\item{...} {default arguments suits to writeWorksheet function.}
 }
 
 
