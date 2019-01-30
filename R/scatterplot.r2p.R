@@ -26,10 +26,10 @@ scatterplot.r2p <- function(dat,x = x,y = y,group = NULL, intercept=TRUE, color=
     total <- data.frame(r2 = summary(lm.whole)$r.squared,p = summary(lm.whole)$coef[8],
                         x1 = min(lm.whole$model$x.variable,na.rm = TRUE),  x2 = max(lm.whole$model$x.variable,na.rm=TRUE))
     with(dat,plot(x.variable,y.variable,pch=ifelse(is.null(pty),1,pty[1]),col = ifelse(is.null(color),'black',color[1]),...))
-	  if(intercept)   plotrix::ablineclip(a=coef(lm.whole)[1],b=coef(lm.whole)[2],x1=total$x1,x2=total$x2,lty = ifelse(total[,'p']<0.05,1,2)) else
-     plotrix::ablineclip(b=coef(lm.whole)[1],x1=total$x1,x2=total$x2,lty = ifelse(total[,'p']<0.05,1,2)) 
+	  if(intercept)   plotrix::ablineclip(a=coef(lm.whole)[1],b=coef(lm.whole)[2],x1=total$x1,x2=total$x2,lty = ifelse(total[,'p']<0.05,1,0)) else
+     plotrix::ablineclip(b=coef(lm.whole)[1],x1=total$x1,x2=total$x2,lty = ifelse(total[,'p']<0.05,1,0)) 
     
-	r2.p.pos[1]=grconvertX(r2.p.pos[1], "npc")  
+    r2.p.pos[1]=grconvertX(r2.p.pos[1], "npc")  
     r2.p.pos[2]=grconvertY(r2.p.pos[2], "npc")  
     
     if(total[,'p']<0.001) 
