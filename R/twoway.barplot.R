@@ -9,7 +9,7 @@
 #' @maximum  Which is used to modify visualtion on significant letters in figure. 
 #' @export
 #' @examples
-twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,legend=TRUE,
+twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,minmum=NULL,legend=TRUE,
                           legend.pos='topright',group.name=group, ...) {
   library(sciplot)
   library(doBy)
@@ -24,7 +24,8 @@ twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", grou
   CI = transform(CI, h = response.mean + response.se, l = response.mean - response.se)
   Max = max(CI$h)
   group.range = cbind(split(CI, CI$group)[[1]]["h"], split(CI, CI$group)[[2]]["l"])
-  para = bargraph.CI(x.factor, response, group, ylim = c(0, ifelse(is.null(maximum),Max*1.2,maximum)), data = dat,...)
+  para = bargraph.CI(x.factor, response, group, ylim = c(ifelse(is.null(minmum),0,minmum), 
+                                                         ifelse(is.null(maximum),Max*1.2,maximum)), data = dat,...)
   
   group.level = levels(dat$group)
   x.factor.level = levels(dat$x.factor)
