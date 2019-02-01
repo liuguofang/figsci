@@ -14,22 +14,23 @@ twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", grou
   library(sciplot)
   library(doBy)
   library(agricolae)
-  dat = dat[c(x.factor, response, group)]
-  names(dat) = c("x.factor", "response", "group")
+  dat <- dat[c(x.factor, response, group)]
+  names(dat) <- c("x.factor", "response", "group")
   if (!is.factor(dat$x.factor)) 
     dat$x.factor <- factor(dat$x.factor)
   if (!is.factor(dat$group)) 
     dat$group <- factor(dat$group)
-  CI = summaryBy(response ~ x.factor + group, data = dat, FUN = c(mean, se))
-  CI = transform(CI, h = response.mean + response.se, l = response.mean - response.se)
-  Max = max(CI$h)
+  CI <- summaryBy(response ~ x.factor + group, data = dat, FUN = c(mean, se))
+  CI <- transform(CI, h = response.mean + response.se, l = response.mean - response.se)
+  Max <- max(CI$h)
   group.range = cbind(split(CI, CI$group)[[1]]["h"], split(CI, CI$group)[[2]]["l"])
-  para = bargraph.CI(x.factor, response, group, ylim = c(ifelse(is.null(minmum),0,minmum), 
+  para <- bargraph.CI(x.factor, response, group, ylim = c(ifelse(is.null(minmum),0,minmum), 
                                                          ifelse(is.null(maximum),Max*1.2,maximum)), data = dat,...)
+  group.level <- levels(dat$group)
+  x.factor.level <- levels(dat$x.factor)
   if(is.null(sig.letters)){
-      group.level = levels(dat$group)
-      x.factor.level = levels(dat$x.factor)
-      split.dat = split(dat, dat$group)
+
+      split.dat <- split(dat, dat$group)
       lett.group <- lett.xfactor <-  matrix(NA, ncol = length(x.factor.level), nrow = length(group.level))
 
       for (i in 1:length(group.level)) {
