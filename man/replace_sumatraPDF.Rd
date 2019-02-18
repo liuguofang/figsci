@@ -15,6 +15,7 @@ This function could be used as openning a list of PDFs efficiently. It will repl
 
 \examples{
 
+setwd(path.package("figsci"))
 replace_sumatraPDF(settings.file = "empty.txt")
 
 }
