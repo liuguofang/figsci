@@ -14,7 +14,7 @@ The figsci package is a R package used to plot a scatterplot, one-way or two-way
 	<TR><TD width=50>english.word.search</TD><td width=700>查找中/英文词语的单词/含义</TD>
 	<TR><TD width=50>fetch_manuscript_citation</TD><td width=700><font color=#0000E3>查看论文稿子正文括弧中参考文献写法</font></TD>
 	<TR><TD width=50>line10</TD><td width=700>表示中国南海疆域的十段线</TD>
-	<TR><TD width=50>mean.variation.calc</TD><td width=700>根据分类变量计算其均值和标记代表差异性的字母</TD>
+	<TR><TD width=50>mean.variation.calc</TD><td width=700>根据分类变量计算其均值±标准差/标准误，并标记代表差异性的字母</TD>
 	<TR><TD width=50>month.cal.agenda</TD><td width=700>对某月的日历表进行任务添加</TD>
 	<TR><TD width=50>oneway.barplot</TD><td width=700><font color=#0000E3>做单因素柱状图，标记代表差异性的字母</font></TD>
 	<TR><TD width=50>package.basefuns</TD><td width=700>挖掘R扩展包中的基础函数</TD>
