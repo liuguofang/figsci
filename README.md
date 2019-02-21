@@ -27,6 +27,7 @@ scatterplot.r2p 做有无分类变量的散点图，标记r2和p值
 sci SCI 数据集 2012-2018 
 sci.search 利用正则表达式查找一个或多个SCI期刊的影响因子情况 
 twoway.barplot 做双因素柱状图，标记代表差异性的字母 
+ 
 
 
 ```r
