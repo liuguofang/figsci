@@ -3,6 +3,31 @@ Guofang Liu
 
 The figsci package is a R package used to plot a scatterplot, one-way or two-way barplot annonated by statistical parameter, visualizing phylogenetic barplot with its associated continuous variables, make agenda plot, and randomized block experiment layout, search R packages based on developer's name, save R data.frame into excel format, search influential factors by means of regular expression, and ten segments boundary for Southern Sea China, transform PDF into png with given DPI, etc. 
 
+author.packages 根据R语言包开发者姓名，查找其属名的r扩展包 
+color.alpha 产生表征点疏密程度的颜色 
+colorexcel 对Excel数据中复合条件的数据值添加背景色 
+com.abund2matrix 把群落调查数据（样方、物种、数量）转换成为物种 x 样方的矩阵数据 
+crosscheck 筛选两个向量的相互不包含的元素 
+data2excel 把数据框数据输出成为Excel数据 
+english.word.search 查找中/英文词语的单词/含义 
+fetch_manuscript_citation 查看论文稿子正文括弧中参考文献写法 
+line10 表示中国南海疆域的十段线 
+mean.variation.calc 根据分类变量计算其均值和标记代表差异性的字母 
+month.cal.agenda 对某月的日历表进行任务添加 
+oneway.barplot 做单因素柱状图，标记代表差异性的字母 
+package.basefuns 挖掘R扩展包中的基础函数 
+pdf2png 调用第三方软件，用R把PDF转成给定分辨率的png图片 
+phylo.barplot 做系统发育柱状图 
+plantspecies2chinese 根据物种拉丁名，查找其中文名称 
+plot.agenda 做年度计划图 
+polygon.region 做区域多边形图 
+randomized.block.layout 画随机区组设计图 
+replace_sumatraPDF 替换sumatraPDF软件中的settings文件 
+scatterplot.r2p 做有无分类变量的散点图，标记r2和p值 
+sci SCI 数据集 2012-2018 
+sci.search 利用正则表达式查找一个或多个SCI期刊的影响因子情况 
+twoway.barplot 做双因素柱状图，标记代表差异性的字母 
+
 
 ```r
   #install.packages("devtools")
