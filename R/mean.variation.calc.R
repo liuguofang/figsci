@@ -7,8 +7,8 @@
 #' @multicom.group Provide a group variable used for mulitple comparisons
 #' @export
 #' @examples
-mean.variation.calc <- function(dat,id.vars = id.vars,SD=FALSE,multicom.group='multicom.group'){
-
+mean.variation.calc <- function(dat,id.vars = id.vars,SD=FALSE,multicom.group='multicom.group', method = 'HSD.test'){
+    library(agricolae)
     dat <- reshape::melt(data = dat, id.vars = id.vars)
   mean.variation <- plyr::ddply(.data = dat, c('variable',id.vars),.fun=function(dt){
   
@@ -23,7 +23,7 @@ mean.variation.calc <- function(dat,id.vars = id.vars,SD=FALSE,multicom.group='m
     level <-levels(dat[, multicom.group])
     
     model <- aov(value~dt[, multicom.group],data=dt)
-    lett <- agricolae::HSD.test(model,"dt[, multicom.group]")$groups
+    lett <- get(method)(model,"dt[, multicom.group]")$groups
     out2=data.frame(multicom.group=level,letter=lett[level,'groups'])
     out2 <- plyr::rename(out2,replace = c("multicom.group" = multicom.group))
     out2
