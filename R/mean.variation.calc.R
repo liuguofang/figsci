@@ -5,6 +5,7 @@
 #' @id.vars Categories array 
 #' @SD Default is calculating SE, if SD = TRUE, it only calculates SD.
 #' @multicom.group Provide a group variable used for mulitple comparisons
+#' @method Provide a multiple comparison approach. The default is HSD.test. 
 #' @export
 #' @examples
 mean.variation.calc <- function(dat,id.vars = id.vars,SD=FALSE,multicom.group='multicom.group', method = 'HSD.test'){
