@@ -1,5 +1,5 @@
 pvalue2display <- function(p,p.r2.on = FALSE){
-   if(!p.r.no){
+   if(!p.r2.no){
       p <- round(p,3)
       for(i in 1:length(p))
          if(p[i]<0.001) 
@@ -7,7 +7,7 @@ pvalue2display <- function(p,p.r2.on = FALSE){
          tag <- grep("<",p)
       p[-tag] <- paste0("==",p[-tag])
       p
-   } esle {
+   } else {
       r2 <- round(p, 2)
       for(i in 1:length(r2))
          if(r2[i]<0.01)
