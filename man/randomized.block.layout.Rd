@@ -25,6 +25,6 @@ randomized.block.layout(cex = 1.2,quadrat.side = c(5, 5), space=c(2, 2), treatme
 randomized.block.layout(cex = 1.2,quadrat.side = c(2, 2), space = c(2, 2),treatment = 9, block = 4, xlab='',ylab='')
 
 
-randomized.block.layout(matrix(1:36, ncol=9,byrow=TRUE),cex = 1.2,quadrat.side = c(2, 2), space = c(2, 2), treatment = 9, block = 4, space=1,xlab='',ylab='')
+randomized.block.layout(matrix(1:36, ncol=9,byrow=TRUE),cex = 1.2,quadrat.side = c(2, 2), space = c(2, 2), treatment = 9, block = 4, xlab='',ylab='')
 
 }
