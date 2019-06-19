@@ -2,7 +2,7 @@
 \alias{scatterplot.r2p}
 \title{Draw a scatterplot with or without category/group and add R square and p-value automatically}
 \usage{
-scatterplot.r2p(dat,x = x,y = y,group = NULL, color=NULL, pty=NULL, cex.size=1,cornerlabel=NULL,r2.p.pos=c(0.1,0.95),txt.space=10,level.off=FALSE,...) 
+scatterplot.r2p(dat,x = x,y = y,group = NULL, color=NULL, pty=NULL, cex.size=1,cornerlabel=NULL,r2.p.pos=c(0.1,0.95),level.off=FALSE,blank=0,...) 
 }
 \description{
 The function could be used as drawing a scatterplot with or without category/group variable. In addition, r2 and p for fitted regression lines can be shown automatically.
@@ -18,9 +18,9 @@ The function could be used as drawing a scatterplot with or without category/gro
 	\item{cex.size} {a cex size in figure options. }
 	\item{cornerlabel} {add a marker at corner position. }
 	\item{r2.p.pos} {the position of r2.p which ranges from (0,1) for x and y axises.}
-	\item{txt.space} {mofidy the distance between level marker and r2.p text.}
-	\item{subfig.nrow} {default is one subplot. If you want to show multiple subplots provide provide a number of subplots vertically.}
 	\item{level.off} {whether level is shown or not. }
+	\item{blank} {modify the distance between level marker and r2.p text.}
+
 }
 \examples{
 data(leaflife,package='smatr')
