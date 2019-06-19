@@ -37,7 +37,7 @@ scatterplot.r2p <- function (dat, x = x, y = y, group = NULL,
                 x1 = x1, x2 = x2, lty = ifelse(p < 0.05, 1, 0)))
        
  
-        lm.coef <-transform(para.coef,p=ifelse(p<0.001,'< 0.001',paste('==',round(p,3))),
+        lm.coef <-transform(lm.coef,p=ifelse(p<0.001,'< 0.001',paste('==',round(p,3))),
 					R2=ifelse(R2<0.01,'< 0.01',paste('==',round(R2,2))))
         txt <- as.formula(sprintf("R^2%s~italic(P)%s", para.coef$R2[i],para.coef$p[i]))
         
