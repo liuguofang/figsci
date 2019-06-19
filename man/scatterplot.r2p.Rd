@@ -24,7 +24,9 @@ The function could be used as drawing a scatterplot with or without category/gro
 }
 \examples{
 data(leaflife,package='smatr')
-scatterplot.r2p(dat=leaflife,x='longev',y='lma', pty=19)
-scatterplot.r2p(dat=leaflife,x='longev',y='lma',group='soilp',whole.line = T,pty=c(1,19))
+	
+scatterplot.r2p(dat=leaflife, x = 'longev', y = 'lma', pty = 19)
+
+scatterplot.r2p(dat=leaflife, x = 'longev',y = 'lma', group = 'soilp', pty = c(1, 19))
 
 }
