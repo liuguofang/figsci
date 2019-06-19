@@ -39,7 +39,7 @@ scatterplot.r2p <- function (dat, x = x, y = y, group = NULL,
  
         lm.coef <-transform(lm.coef,p=ifelse(p<0.001,'< 0.001',paste('==',round(p,3))),
 					R2=ifelse(R2<0.01,'< 0.01',paste('==',round(R2,2))))
-        txt <- as.formula(sprintf("R^2%s~italic(P)%s", para.coef$R2[i],para.coef$p[i]))
+        txt <- as.formula(sprintf("R^2%s~italic(P)%s", lm.coef$R2,lm.coef$p))
         
         r2.p.pos[1] <- grconvertX(r2.p.pos[1], "npc")
         r2.p.pos[2] <- grconvertY(r2.p.pos[2], "npc")
@@ -78,7 +78,7 @@ scatterplot.r2p <- function (dat, x = x, y = y, group = NULL,
 
         for(i in 1:group.no) 
            txt[[i]] <- as.formula(sprintf("%s~R^2%s~italic(P)%s", group.string[i],
-            para.coef$R2[i], para.coef$p[i]))
+            lm.coef$R2[i], lm.coef$p[i]))
 
         levels(group) <- pty[1:group.no]
         if (is.null(color)) 
