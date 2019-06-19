@@ -9,14 +9,12 @@
 #' @cex.size Cex size in figure options. 
 #' @cornerlabel Add a marker at corner position. 
 #' @r2.p.pos The position of r2.p which ranges from (0,1) for x and y axises.
-#' @txt.space Mofidy the distance between level marker and r2.p text.
 #' @level.off Whether level is shown or not. 
 #' @examples
 
-scatterplot.r2p <- function (dat, x = x, y = y, group = NULL, 
-    color = NULL, whole.line = FALSE, pty = NULL, cex.size = 1, 
-    cornerlabel = NULL, r2.p.pos = c(0.1, 0.95), txt.space = 10, 
-    level.off = FALSE, ...) 
+scatterplot.r2p <- function (dat, x = x, y = y, group = NULL, color = NULL, 
+			     pty = NULL, cex.size = 1, cornerlabel = NULL, 
+			     r2.p.pos = c(0.1, 0.95),level.off = FALSE,blank=0, ...) 
 {
     x.variable <- dat[, x]
     y.variable <- dat[, y]
@@ -37,7 +35,7 @@ scatterplot.r2p <- function (dat, x = x, y = y, group = NULL,
                 x1 = x1, x2 = x2, lty = ifelse(p < 0.05, 1, 0)))
        
  
-        lm.coef <-transform(lm.coef,p=ifelse(p<0.001,'< 0.001',paste('==',round(p,3))),
+        lm.coef <- transform(lm.coef,p=ifelse(p<0.001,'< 0.001',paste('==',round(p,3))),
 					R2=ifelse(R2<0.01,'< 0.01',paste('==',round(R2,2))))
         txt <- as.formula(sprintf("R^2%s~italic(P)%s", lm.coef$R2,lm.coef$p))
         
@@ -72,35 +70,33 @@ scatterplot.r2p <- function (dat, x = x, y = y, group = NULL,
         lm.coef$lty <- ifelse(lm.coef$p < 0.05, 1, 0)
        
         lm.coef <- transform(lm.coef,p = ifelse(p<0.001,'< 0.001',paste('==',round(p,3))),
-					R2 = ifelse(R2<0.01,'< 0.01', paste('==',round(R2,2))), lty=ifelse(p<0.05,1,0))
-        lm.coef$color <- color
+			     R2 = ifelse(R2<0.01,'< 0.01', paste('==',round(R2,2))), 
+			     lty=ifelse(p<0.05,1,0))
+       
         txt <- vector('expression',group.no)
-
+        value <- max(nchar(group.string))-nchar(group.string)+1+blank
+        space <- sapply(value,function(s) paste(rep("~",time=s),collapse=''))
         for(i in 1:group.no) 
-           txt[[i]] <- as.formula(sprintf("%s~R^2%s~italic(P)%s", group.string[i],
-            lm.coef$R2[i], lm.coef$p[i]))
+           txt[[i]] <- as.formula(sprintf("%s%sR^2%s~italic(P)%s", ifelse(level.off,'',group.string[i]),
+					  ifelse(level.off,'',space[i]), lm.coef$R2[i], lm.coef$p[i]))
 
         levels(group) <- pty[1:group.no]
         if (is.null(color)) 
             color = as.numeric(lm.coef$group)
         else if (length(color) == 1) 
             color <- rep(color, group.no)
-
+        lm.coef$color <- color
         with(dat, plot(x.variable, y.variable, pch = pty, col = color[as.numeric(group)], 
             ...))
         r2.p.pos[1] <- grconvertX(r2.p.pos[1], "npc")
         r2.p.pos[2] <- grconvertY(r2.p.pos[2], "npc")       
     
         if (!is.null(cornerlabel)) 
-            plotrix::corner.label(x = -1, y = 1, label = cornerlabel)
-        space <- strwidth(paste(rep("a", txt.space), collapse = ""))
-        
+            plotrix::corner.label(x = -1, y = 1, label = cornerlabel)     
 
        d_ply(lm.coef,.(group), .fun=function(dt) with(dt,
                      plotrix::ablineclip(a=a,b=b,col=color,x1=x1,x2=x2)))
        legend(r2.p.pos[1],r2.p.pos[2],yjust = 0.5,legend=txt, pch = pty,  col = color, 
-               lty = lm.coef$lty, bty = "n",adj=0, cex = cex.size)
+               lty = lm.coef$lty, bty = "n",adj=0, cex = cex.size, text.col=color)
        }
 }
-
-
