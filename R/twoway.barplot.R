@@ -10,7 +10,7 @@
 #' @export
 #' @examples
 twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,
-                          minmum=NULL,legend=TRUE, sig.letters=NULL, legend.pos='topright',group.name=group, ...) {
+                          minmum=NULL,legend=TRUE, sig.letters=NULL, legend.pos='topright',group.name=group, italic.on=FALSE,...) {
   library(sciplot)
   library(doBy)
   library(agricolae)
@@ -48,10 +48,23 @@ twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", grou
 
   sig.letters=matrix(paste0(matrix(lett.group),matrix(lett.xfactor)),ncol=length(x.factor.level))
   }
-  for (i in 1:length(x.factor.level)) 
+  
+  for (i in 1:length(x.factor.level))
     text(para$xvals[, i], para$CI[2, , i] + par("usr")[4] * 0.03, sig.letters[, i]) 
-  if(legend)
-  legend(legend.pos,legend =c(group.name,group.level),pch=c(NA,rep(22,length(group.level))),pt.bg=c(NA,gray.colors(length(group.level))),...)
-  }
+  
+  if(italic.on){
+	    txt <- vector('expression',length(group.level))
+	    for(i in 1:length(group.level))
+	    		txt[[i]] <- substitute(paste(italic(A)), list(A = group.level[i]))
+    } else txt <- group.level
+
+  if (legend)
+	if(group.name=='') 
+		legend(legend.pos, legend = txt, pch = rep(22, length(group.level)), 
+			pt.bg = gray.colors(length(group.level)))
+   else
+        legend(legend.pos, legend = c(group.name, txt), pch = c(NA, rep(22, length(group.level))), 
+            pt.bg = c(NA, gray.colors(length(group.level))))
+}
 
 
