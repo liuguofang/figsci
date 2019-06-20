@@ -46,7 +46,7 @@ twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", grou
         lett.xfactor[,j] <- as.character(lett2[match(group.level,row.names(lett2)),'groups'])
       }
 
-  sig.letters=matrix(paste0(matrix(lett.group),matrix(lett.xfactor)),ncol=length(x.factor.level))
+     sig.letters <- matrix(paste0(matrix(lett.group),matrix(lett.xfactor)),ncol=length(x.factor.level))
   }
   
   for (i in 1:length(x.factor.level))
@@ -62,9 +62,9 @@ twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", grou
 	if(group.name=='') 
 		legend(legend.pos, legend = txt, pch = rep(22, length(group.level)), 
 			pt.bg = gray.colors(length(group.level)))
-   else
-        legend(legend.pos, legend = c(group.name, txt), pch = c(NA, rep(22, length(group.level))), 
-            pt.bg = c(NA, gray.colors(length(group.level))))
+         else
+		 legend(legend.pos, legend = c(group.name, txt), pch = c(NA, rep(22, length(group.level))), 
+                        pt.bg = c(NA, gray.colors(length(group.level))))
 }
 
 
