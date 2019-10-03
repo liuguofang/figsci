@@ -14,6 +14,6 @@ The function could be used as fetching citation from main text in a manuscript. 
 
 \examples{
 txt <- readLines("clipboard")
-fetch.reference(txt)
+fetch_manuscript_citation(txt)
 
 }
