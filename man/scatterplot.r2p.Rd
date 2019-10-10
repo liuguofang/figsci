@@ -13,7 +13,6 @@ The function could be used as drawing a scatterplot with or without category/gro
 	\item{y} {a variable in y axis.}
 	\item{group} {a group variable; the group default is NULL. }
 	\item{color} {a color array for different groups.}
-	\item{whole.line} {a fitted linear regression across all data points. }
 	\item{pty} {a array on point types, which the length should match the number of group levels. }
 	\item{cex.size} {a cex size in figure options. }
 	\item{cornerlabel} {add a marker at corner position. }
