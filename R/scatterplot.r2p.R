@@ -95,7 +95,7 @@ scatterplot.r2p <- function (dat, x = x, y = y, group = NULL, color = NULL,
             plotrix::corner.label(x = -1, y = 1, label = cornerlabel)     
 
        d_ply(lm.coef,.(group), .fun=function(dt) with(dt,
-                     plotrix::ablineclip(a=a,b=b,col=color,x1=x1,x2=x2)))
+                     plotrix::ablineclip(a=a,b=b,col=color,x1=x1,x2=x2, lty=lty)))
        legend(r2.p.pos[1],r2.p.pos[2],yjust = 0.5,legend=txt, pch = pty,  col = color, 
                lty = lm.coef$lty, bty = "n",adj=0, cex = cex.size, text.col=color)
        }
