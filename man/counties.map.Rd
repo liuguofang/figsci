@@ -1,18 +1,26 @@
 \name{counties.map}
 \alias{counties.map}
-\title{Draw more counties map of China}
+\title{Draw one or more counties map of China}
 \usage{
-counties.map(counties,text.pos = 1,legend.pos= c(0.9,0.9),strange.polgyon=FALSE,...)}
+counties.map(county.polygon.dir = "E:/analysis and graphics/R.eclipse/data/GIS-地图/县级行政界线",
+                      county.pos = "E:/analysis and graphics/R.eclipse/data",					   
+                      counties,text.pos = 1,legend.pos= c(0.9,0.9),scale.pos = c(0.05,0.05),
+                      strange.polygon=FALSE,...)
+}
 \description{
-This function can be used to draw more counties map of China.
+This function can be used to draw one or more counties map of China.
 }
 
 \arguments{
+	\item{county.polygon.dir} {the place of county shape files.}
 	\item{counties} {the array of counties in China.}
 	\item{text.pos} {the position of county names with 1-4 representing below, left, above and left of points. }
-	\item{legend.pos} {the position of legend (0, 0) and c(1,1) denote leftbottom and righttop place where} {the legend appears. }
-	\item{text.pos} {the position of county names with 1-4 representing below, left, above and left of points. }
+	\item{legend.pos} {the position of legend (0, 0) and c(1,1) denote leftbottom and righttop place wherethe legend appears. }
+	\item{text.pos} {the position of county names with 1, 2, 3, 4 representing below, left, above and left of points respectively. }
+	\item{scale.pos} {the position of distance scale. }
 	\item{strange.polygon} {remove strange polygons representing far way from focused map regions.}
+	\item{color} {filled color for polygons. It can be used to fill different colors for different cities.}
+	\item{offset} {ajust the distance between point character and associated text.}
 	\item{ ...} {futher arguments to pass \code{\link{lines}} function.}
 }
 
