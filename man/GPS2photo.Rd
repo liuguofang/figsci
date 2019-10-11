@@ -11,7 +11,7 @@ This function can be used to add GPS coordiantes (Longitude, Latitude) onto phot
 \arguments{
 	\item{photo.pos} {the place of photos filefold.}
 	\item{exiftool.pos} {the place of exiftool.exe file. please download exiftool.exe file from \url{https://sno.phy.queensu.ca/~phil/exiftool/} }
-  \item{GPS.point} {Longitude and latitude coordinates,i.e. GPS.point=c(110,40)}
+	\item{GPS.point} {Longitude and latitude coordinates.}
 }
 
 \examples{
