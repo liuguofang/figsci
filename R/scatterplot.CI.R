@@ -1,4 +1,4 @@
-confidence_line_scatter <- function(mydata, x, y, line.col = "black", confidence.line.col = "red", 
+scatterplot.CI <- function(mydata, x, y, line.col = "black", confidence.line.col = "red", 
     confidence.line = FALSE, ...) 
 {
     x <- mydata[, x]
