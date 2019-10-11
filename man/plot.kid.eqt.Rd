@@ -1,13 +1,12 @@
 \name{plot.kid.eqt }
 \alias{plot.kid.eqt }
-\title{用R生成50道加减乘除运算题}
+\title{Produce an excise on 50 equations for primary students}
 \usage{
 plot.kid.eqt(equation, no=50, col.n=3, page.no=NULL,main="50-math-formulas excise for kids",
 	subtitle= c("Class","Name","Time","Date"),cex=1,width=NULL) 
 
 }
-\description{用R生成50道加减乘除运算题
-
+\description{This function is used to produce an excise on 50 equations for primary students
 }
 \arguments{
    \item{equation} {equation vector.}
