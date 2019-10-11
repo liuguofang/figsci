@@ -9,7 +9,7 @@ Create a color vector with different overlapping colors
 }
 \arguments{
 	\item{color} {a string describing a colour. }
-	\item{trans} {adds transparancy to a color}
+	\item{trans} {adds transparancy to a colour.}
 }
 
 
