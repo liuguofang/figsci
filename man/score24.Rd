@@ -6,7 +6,7 @@ score24(x)
 }
 \description{
 This function can be used to solve score 24 for students and produce possible equations.
-
+}
 \arguments{
 	\item{x} {a vector with four numbers.}
 }
