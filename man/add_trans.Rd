@@ -2,7 +2,7 @@
 \alias{add_trans}
 \title{Create a color vector with different overlapping colors}
 \usage{
-addTrans(color,trans)
+add_trans(color,trans)
 }
 \description{
 Create a color vector with different overlapping colors 
