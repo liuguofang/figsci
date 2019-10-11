@@ -6,10 +6,10 @@ bioclim.extract(bioclim.pos="E:/analysis and graphics/R.eclipse/data/worldclim",
 }
 \description{
 This function can be used to extract 19 bioclimate variables.
-
+}
 \arguments{
 	\item{bioclim.pos} {the directory of bioclimate data. }
-    \item{site} {a data.frame that contains only coordinates (long, lat) .}
+        \item{site} {a data.frame that contains only coordinates (long, lat) .}
 }
 
 \examples{
@@ -22,4 +22,5 @@ library(raster)
 dat <- getData('worldclim', var='bio', res=10)
 d <- data.frame(x=c(118.5),y=c(48.73333)) # 新巴尔虎左旗
 extract(dat,d)
+
 }
