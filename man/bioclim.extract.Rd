@@ -5,7 +5,7 @@
 bioclim.extract(bioclim.pos="E:/analysis and graphics/R.eclipse/data/worldclim",site)
 }
 \description{
-This function can be used to extract 19 bioclimate variables.
+This function can be used to extract 19 bioclimate variables. The means of data styles can be seen in \url{http://worldclim.org/formats1}. 
 }
 \arguments{
 	\item{bioclim.pos} {the directory of bioclimate data. }
