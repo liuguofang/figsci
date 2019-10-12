@@ -1,5 +1,5 @@
 Package: figsci
-Version: 1.0.0
+Version: 1.0.1
 Date: 2019/10/11
 Title: Let plotting figure and scientific visualization and information gain easier and more efficient. 
 Authors@R: person("First", "Last", email = "liugf@ibcas.ac.cn", role = c("aut", "cre"))
