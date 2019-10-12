@@ -15,7 +15,7 @@ Create desktop jpg and/or add a saying.
 \examples{
 lapply(1:100, function(i) {
 			jpeg(file = paste("Rart", i, ".jpg", sep = ""), width = 1280, height = 800)
-			desktop_jpg(saying="少谈论些主义，多研习些问题")
+			desktop_jpg(saying="宁静致远")
 			dev.off()
 		})
     
