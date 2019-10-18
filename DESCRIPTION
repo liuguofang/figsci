@@ -1,6 +1,6 @@
 Package: figsci
-Version: 1.0.1
-Date: 2019/10/12
+Version: 1.0.2
+Date: 2019/10/18
 Title: Let plotting figure and scientific visualization and information gain easier and more efficient. 
 Authors@R: person("First", "Last", email = "liugf@ibcas.ac.cn", role = c("aut", "cre"))
 Description: The package can plot one-way or two-way barplots, scatterplots with statistical parameter and other functions such as phylogenetic barplot, randomized block experiment layout, calendar tasks visulization etc. 
