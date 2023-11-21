@@ -10,7 +10,7 @@
 #' @examples 
 
 
-colorexcel <- function(filename, threshold, variable, more = TRUE, sheetTh = 1, color=2)
+colorexcel <- function(filename, threshold, variable, more = TRUE, sheetth = 1, color=2)
 {
 	require(XLConnect)
 	wb <- loadWorkbook(filename, create = TRUE)
