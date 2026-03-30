@@ -1,5 +1,5 @@
 pvalue2display <- function(p,p.r2.on = FALSE){
-   if(!p.r2.no){
+   if(!p.r2.on){
       p <- round(p,3)
       for(i in 1:length(p))
          if(p[i]<0.001) 
