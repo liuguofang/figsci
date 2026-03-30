@@ -1,8 +1,8 @@
-\name{blank.fill.transform}
-\alias{blank.fill.transform}
+\name{table_clean_repeat}
+\alias{table_clean_repeat}
 \title{Fill or clear catogies content in a data.frame}
 \usage{
-blank.fill.transform(dat,add.blank=FALSE)
+table_clean_repeat(dat, add.blank = FALSE)
 }
 \description{
 Fill or clear catogies content in a data.frame. 
@@ -18,6 +18,7 @@ data(leaflife,package='smatr')
 
 library(plyr)
 d <- cbind(catcolwise(as.character)(leaflife),numcolwise(as.numeric)(leaflife))
-d2 <- blank.fill.transform(d,T)
-blank.fill.transform(d2)
+d2 <- table_clean_repeat(d, add.blank = TRUE)
+d2
+table_clean_repeat(d2)
 }
