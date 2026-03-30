@@ -1,8 +1,8 @@
-\name{author.packages}
-\alias{author.packages}
-\title{ Search the extended R packages based on an author}
+\name{author_packages}
+\alias{author_packages}
+\title{Search the extended R packages based on an author}
 \usage{
-author.packages(author, ignore.case = TRUE, ...)
+author_packages(author, ignore.case = TRUE, ...)
 }
 \description{
  This function can be used to find author's package(s) by means of findFn function of sos package.}
@@ -18,7 +18,7 @@ author.packages(author, ignore.case = TRUE, ...)
 
 \examples{
 
-pack <- author.packages("Hadley Wickham")
+pack <- author_packages("Hadley Wickham")
 pack
 
 }
