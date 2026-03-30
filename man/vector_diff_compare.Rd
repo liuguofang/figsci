@@ -14,6 +14,10 @@ This function can be used to check interactively whether elements from array x d
 }
 
 \examples{
+a <- c(1, 2, 3)
+b <- c(2, 3, 4)
+vector_diff_compare(a, b)
+
 data(BCI, package='vegan')
 set.seed(99)
 species.group1 <- sample(names(BCI),100)
