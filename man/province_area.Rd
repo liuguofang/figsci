@@ -1,5 +1,5 @@
-\name{province.area}
-\alias{province.area}
+\name{province_area}
+\alias{province_area}
 \title{Calculate the province or city area}
 \usage{
 province.area(province)
@@ -11,7 +11,8 @@ Calculate the province or city area. The province.area function was written in 2
 	\item{province} {a province name.}
 }
 
-\examples{setwd("E:/3R/2data/china's edges")
+\examples{
+
 provinceArea('新疆')
 
  province.area('河南省')
