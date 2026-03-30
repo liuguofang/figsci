@@ -1,22 +1,15 @@
 province.map <- function(province='北京',...){
-	library(maptools)
-	library(gstat)
+	library(sf)
 	nation.edge <- 'bou2_4p.shp'
-	nc <- readShapePoly(nation.edge, proj4string = CRS("+proj=longlat +ellps=clrk66"))
+	nc <- st_read(nation.edge, options = "ENCODING=GBK", quiet = TRUE)
+	st_crs(nc) <- "+proj=longlat +ellps=clrk66"
 	
-	tag <- grep(province,nc@data$NAME)
-	res <- NULL
-	for(i in 1:length(tag))
-		res  <- rbind(res,nc@polygons[[tag[i]]]@Polygons[[1]]@coords)
+	tag <- grep(province,nc$NAME)
+	if(length(tag) == 0) stop("未找到该省份名称！") 
+	province_poly <- nc[tag, ]
 	
-	side <- res
-	xy.range=apply(side,2,range)
-	require(diagram)
-	openplotmat(xlim =xy.range[,1], ylim = xy.range[,2])
+	plot(st_geometry(province_poly), main = province)
 	axis(1)
 	axis(2)
-	for(i in 1:length(tag))
-		
-		lines(nc@polygons[[tag[i]]]@Polygons[[1]]@coords,...)
 	box()
 }
