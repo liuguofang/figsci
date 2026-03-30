@@ -1,4 +1,4 @@
-dnorm.curve <- function(M, SD,xlab='',...) 
+norm_percentile_curve <- function(M, SD,xlab='',...) 
 {
 	# 2019-10-14
 	# used to show precipitation variation distribution
