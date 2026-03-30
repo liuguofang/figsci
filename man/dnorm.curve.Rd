@@ -1,5 +1,5 @@
-\name{dnorm.curve}
-\alias{dnorm.curve}
+\name{norm_percentile_curve}
+\alias{norm_percentile_curve}
 \title{Draw normal density curve based on mean and standard deviation}
 \usage{
 dnorm.curve(M, SD,xlab='',...) 
@@ -16,5 +16,5 @@ The function could be used as drawing normal density curve based on mean and sta
 
 \examples{
 M <- 26.676471; SD <- 3.682231
-dnorm.curve(M = M, SD = SD,xlab=Growth~season~rain~pulse~'No.')
+norm_percentile_curve(M = M, SD = SD,xlab=Growth~season~rain~pulse~'No.')
 }
