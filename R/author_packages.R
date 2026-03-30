@@ -1,4 +1,4 @@
-author.packages <- function(author,ignore.case = TRUE,...){
+author_packages <- function(author,ignore.case = TRUE,...){
   if (!requireNamespace("sos", quietly = TRUE)) stop("Please install 'sos' package.")
   if (!requireNamespace("plyr", quietly = TRUE)) stop("Please install 'plyr' package.")
   
