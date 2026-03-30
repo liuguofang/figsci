@@ -1,4 +1,4 @@
-blank.fill.transform <- function(dat, add.blank = FALSE)
+table_clean_repeat <- function(dat, add.blank = FALSE)
 {
    if(!add.blank) {
 	library(mefa)
