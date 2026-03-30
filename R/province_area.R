@@ -1,7 +1,7 @@
 province_area <- function(province){
 
 	library(sf)
-    nc <- st_read(shpfile, quiet = TRUE)
+    nc <- st_read(shpfile, options = "ENCODING=GBK", quiet = TRUE)
 	tag <- grep(province, nc$NAME)
     if (length(tag) == 0) stop("Province not found.")
 	  
