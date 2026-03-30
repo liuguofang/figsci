@@ -1,4 +1,4 @@
-province_rea <- function(province){
+province_area <- function(province){
 
 	library(sf)
     nc <- st_read(shpfile, quiet = TRUE)
