@@ -1,8 +1,8 @@
-\name{crosscheck}
-\alias{crosscheck}
+\name{vector_diff_compare}
+\alias{vector_diff_compare}
 \title{Check whether elements of x don't belong to y and whether elments of y don't belong to x}
 \usage{
-crosscheck(x, y)
+vector_diff_compare(x, y)
 }
 \description{
 This function can be used to check interactively whether elements from array x don't belong to array y.
@@ -14,7 +14,10 @@ This function can be used to check interactively whether elements from array x d
 }
 
 \examples{
-x <- 1:10
-y <- 6:15
-crosscheck(x, y)
+data(BCI, package='vegan')
+set.seed(99)
+species.group1 <- sample(names(BCI),100)
+# randomly delete 5 species 
+species.group2<- species.group1[-sample(100,5)]
+vector_diff_compare(species.group1, species.group2)
 }
