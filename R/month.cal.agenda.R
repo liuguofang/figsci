@@ -8,7 +8,7 @@
 #' @bg.col  Background colors for events or tasks items.
 #' @export
 #' @examples
-month.cal.agenda <- function(month =NULL, year = NULL, dayth, work, bg.col = "gray", ...) {
+month_cal_agenda <- function(month =NULL, year = NULL, dayth, work, bg.col = "gray", ...) {
 	if(is.null(month)){
 		month <- as.numeric(strsplit(as.character(Sys.Date()),split='-')[[1]][2])
 	} 
