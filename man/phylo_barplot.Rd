@@ -1,5 +1,5 @@
-\name{phylo.barplot}
-\alias{phylo.barplot}
+\name{phylo_barplot}
+\alias{phylo_barplot}
 \title{Plot a phylogenetic tree and associated barplot(s) based on same species list}
 \usage{
 phylo.barplot(phylo,dat,SE=NULL,var.lab=NULL, ...)
@@ -42,13 +42,13 @@ traits <- traits[match(tre$tip.label,traits$species),]
 traits.se <- traits.se[match(tre$tip.label,traits.se$species),]
 
 # two traits barplot and a phylogenetic tree
-phylo.barplot(phylo=tre,dat=traits,SE=traits.se,var.lab=c("Trait 1","Trait 2"),cex=0.7)
+phylo_barplot(phylo=tre,dat=traits,SE=traits.se,var.lab=c("Trait 1","Trait 2"),cex=0.7)
 
 
 traits2=traits[,1:2]
 traits.se2=traits[,1:2]
 # one trait barplot and a phylogenetic tree
-phylo.barplot(phylo=tre,dat=traits2,SE=traits.se2,var.lab="Trait 1",cex=0.6)
+phylo_barplot(phylo=tre,dat=traits2,SE=traits.se2,var.lab="Trait 1",cex=0.6)
 
 
 }
