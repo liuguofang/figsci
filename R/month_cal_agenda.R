@@ -1,4 +1,4 @@
-#' A month.cal.agenda  Function
+#' A month_cal_agenda  Function
 #'
 #' This function allows you to add event or tasks on calendar figure (cal function in TeachingDemos package).
 #' @month Which month you want to draw
