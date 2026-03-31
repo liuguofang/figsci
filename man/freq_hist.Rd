@@ -15,6 +15,6 @@ This function can be used to plot a histogram with frequence curve.
 \examples{
 
 data(leaflife, package='smatr')
-fre_hist(log10(leaflife$longev))
+freq_hist(log10(leaflife$longev))
 }
 
