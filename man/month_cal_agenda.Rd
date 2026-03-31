@@ -24,6 +24,6 @@ library(TeachingDemos)
 year=2026; month=3
 cal(year=year,month=month)
 title(main = sprintf("%d-%02d", year, month),out=T,adj=0,cex=2)
-month.cal.agenda(dayth = c(1, 3, 5), work = c("Work","Playing games\n outside.",
+month_cal_agenda(dayth = c(1, 3, 5), work = c("Work","Playing games\n outside.",
 	"Go to field"), cex = 1.2, xpd = TRUE) 
 }
