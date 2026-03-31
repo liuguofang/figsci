@@ -1,8 +1,8 @@
-\name{ggplot.color}
-\alias{ggplot.color}
-\title{A color vector from ggplot.color style}
+\name{ggplot_color}
+\alias{ggplot_color}
+\title{A color vector from ggplot color style}
 \usage{
-ggplot.color(n)
+ggplot_color(n)
 }
 \description{
 This function can be used to produce color vector from ggplot2.
@@ -12,5 +12,5 @@ This function can be used to produce color vector from ggplot2.
 }
 \examples{
 x <- 1:10
-barplot(x,col=ggplot.color(length(x)))
+barplot(x,col=ggplot_color(length(x)))
 }
