@@ -1,8 +1,8 @@
-\name{cor.matrix}
-\alias{cor.matrix}
+\name{cor_matrix}
+\alias{cor_matrix}
 \title{Produce a correlation matrix.}
 \usage{
-cor.matrix(dat,method='pearson')
+cor_matrix(dat, method = 'pearson')
 }
 \description{
 This function can be used to produce a correlation matrix which lower triangle is correlation coefficent and upper triangle is p values.
@@ -16,7 +16,7 @@ This function can be used to produce a correlation matrix which lower triangle i
 \examples{
 
 
-(out <- cor.matrix(iris[,-5]))
+(out <- cor_matrix(iris[,-5]))
 
 data2excel(dat = out, filename = 'correlation res.xlsx', sheetname = 'Sheet1', create = TRUE)
 
