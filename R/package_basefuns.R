@@ -1,4 +1,4 @@
-package.basefuns <- function(package.name){
+package_basefuns <- function(package.name){
     library(package.name,character.only = TRUE)
     library(plyr)
     library(stringr)
