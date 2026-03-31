@@ -25,5 +25,5 @@ cal(year = year, month = month)
 title(main = sprintf("%d-%02d", year, month), out = TRUE, adj = 0, cex = 2)
 dayth <- c(1, 3, 5)
 item <- c("Work", "Playing games outside", "Go to field")
-month_cal_agenda(dayth = dayth , work = item, cex = 1.2, xpd = TRUE)
+# month_cal_agenda(dayth = dayth , work = item, cex = 1.2, xpd = TRUE)
 }
