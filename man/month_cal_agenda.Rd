@@ -18,4 +18,10 @@ The function could be used to add events or tasks on the calendar figure (output
 \seealso{
   \code{\link{cal}}
 }
-\examples{library(TeachingDemos); year <- 2026; month <- 3; cal(year = year, month = month); title(main = sprintf("%d-%02d", year, month), out = TRUE, adj = 0, cex = 2); month_cal_agenda(dayth = c(1, 3, 5), work = c("Work", "Playing games outside", "Go to field"), cex = 1.2, xpd = TRUE)}
+\examples{
+library(TeachingDemos)
+year <- 2026; month <- 3
+cal(year = year, month = month)
+title(main = sprintf("%d-%02d", year, month), out = TRUE, adj = 0, cex = 2)
+month_cal_agenda(dayth = c(1, 3, 5), work = c("Work", "Playing games outside", "Go to field"), cex = 1.2, xpd = TRUE)
+}
