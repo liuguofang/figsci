@@ -23,7 +23,8 @@ library(TeachingDemos)
 year <- 2026
 month <- 3
 cal(year=year, month=month)
-title(main = paste(year, month, sep = "-"), adj = 0)
+title(main = paste(year, month, sep = "-"), adj = 0, outer = TRUE)
 month_cal_agenda(month = month, year = year, dayth = c(1, 3, 5), work = c("play", "work", "outside"))
+
 }
 
