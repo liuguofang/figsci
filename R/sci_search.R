@@ -1,5 +1,5 @@
 
-sci.search <- function(dat = sci,journal=NULL,type=NULL,IF5.threshold=NULL,yr=NULL){
+sci_search <- function(dat = sci,journal=NULL,type=NULL,IF5.threshold=NULL,yr=NULL){
     sci <- unique(sci)
     if(!is.null(type)) {
         dat <-  subset(dat,get(type)!='')
