@@ -1,4 +1,4 @@
-freq_hist <- function(dat = NULL, bins = 30) {
+freq_hist <- function(dat = NULL, bins = 10) {
     library(ggplot2)
     if (is.null(dat)) {
         set.seed(123)
