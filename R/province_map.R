@@ -1,6 +1,5 @@
-province.map <- function(province='北京',...){
+province_map <- function(nation.edge = 'bou2_4p.shp', province = '北京',...){
 	library(sf)
-	nation.edge <- 'bou2_4p.shp'
 	nc <- st_read(nation.edge, options = "ENCODING=GBK", quiet = TRUE)
 	st_crs(nc) <- "+proj=longlat +ellps=clrk66"
 	
