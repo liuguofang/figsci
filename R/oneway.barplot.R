@@ -1,4 +1,4 @@
-#' An oneway.barplot function
+#' An oneway_barplot function
 #'
 #' This function allows you draw a phylogenetic tree and associated barplot.
 #' @data a dataframe file.
