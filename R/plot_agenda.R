@@ -1,4 +1,4 @@
-#' The plot.agenda function
+#' The plot_agenda function
 #'
 #' This function can visualize agenda.
 #' @task Feed a agenda file including only time and task variables. 
@@ -9,7 +9,7 @@
 #' @text.left  Whether tasks are shown on the left panel or on adjacent gray rectangles.
 #' @export
 #' @examples
-plot.agenda <- function(task, period = 'period', item = 'item',year.cex = 2, month.cex = 1, text.left = TRUE, 
+plot_agenda <- function(task, period = 'period', item = 'item',year.cex = 2, month.cex = 1, text.left = TRUE, 
 		text.cex = 1.2, ...) {
 
 	segment.month <- function(begin, end) {
