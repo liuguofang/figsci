@@ -5,7 +5,7 @@
 #' @threshold the threshold value which is checked.
 #' @variable the continous variable name of data.
 #' @more  a switch which TRUE and FALSE denote over and less than the threshold.
-#' @sheetTh the order of sheet in the excel file.
+#' @sheet.name the name of sheet in the excel file.
 #' @color makered colour.
 #' @examples 
 
