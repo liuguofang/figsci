@@ -15,8 +15,7 @@ This function can be used to save a tiff file after running R code that producs 
 	\item{res} {resolution of the tiff file.}
 }
 \examples{
-# 例子
-plot(rnorm(100))
-save_fig("同时保存tiff、eps、pdf格式的图",width=6,height=7,pointsize=12)
+hist(rnorm(100))
+save_fig("save the figure in terms of tiff, eps, pdf",width=6,height=7,pointsize=12)
 	
 }
