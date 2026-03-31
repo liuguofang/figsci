@@ -1,8 +1,8 @@
-\name{scatterplot.r2p}
-\alias{scatterplot.r2p}
+\name{scatterplot_r2_p}
+\alias{scatterplot_r2_p}
 \title{Draw a scatterplot with or without category/group and add R square and p-value automatically}
 \usage{
-scatterplot.r2p(dat,x = x,y = y,group = NULL, color=NULL, pty=NULL, cex.size=1,cornerlabel=NULL,r2.p.pos=c(0.1,0.95),level.off=FALSE,blank=0,...) 
+scatterplot_r2p(dat,x = x,y = y,group = NULL, color=NULL, pty=NULL, cex.size=1,cornerlabel=NULL,r2.p.pos=c(0.1,0.95),level.off=FALSE,blank=0,...) 
 }
 \description{
 The function could be used as drawing a scatterplot with or without category/group variable. In addition, r2 and p for fitted regression lines can be shown automatically.
@@ -24,8 +24,8 @@ The function could be used as drawing a scatterplot with or without category/gro
 \examples{
 data(leaflife,package='smatr')
 	
-scatterplot.r2p(dat=leaflife, x = 'longev', y = 'lma', pty = 19)
+scatterplot_r2_p(dat=leaflife, x = 'longev', y = 'lma', pty = 19)
 
-scatterplot.r2p(dat=leaflife, x = 'longev',y = 'lma', group = 'soilp', pty = c(1, 19))
+scatterplot_r2_p(dat=leaflife, x = 'longev',y = 'lma', group = 'soilp', pty = c(1, 19))
 
 }
