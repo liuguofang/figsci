@@ -1,8 +1,8 @@
-\name{mean.se}
-\alias{mean.se}
+\name{mean_se}
+\alias{mean_se}
 \title{Calculate mean and standard error (se) of continuous variables among different factors from a data.frame.}
 \usage{
-mean.se(data,...)
+mean_se(data,...)
 }
 \description{
 This function can be used to calculate mean and standard error (se) of continuous variables among different factors from a data.frame.
