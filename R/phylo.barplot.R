@@ -1,11 +1,11 @@
-#' A phylo.barplot Function
+#' A phylo_barplot Function
 #'
-#' This function allows you draw a phylogenetic tree and associated barplot.
+#' This function allows to draw a phylogenetic tree and associated barplot.
 #' @phylo A phylogenetic tree .
 #' @dat traits
 #' @export
 #' @examples
-phylo.barplot <- function(phylo,dat,SE=NULL,var.lab=NULL, ...){
+phylo_barplot <- function(phylo,dat,SE=NULL,var.lab=NULL, ...){
 	
 	par(mar = rep(0,4), omi = c(0.15, 0.5, 0.1, 0.1), mgp = c(0.8, 0.5, 0), xpd = NA)
 	barplot.no = ncol(dat) - 1
