@@ -1,8 +1,8 @@
-\name{plot.agenda}
-\alias{plot.agenda}
+\name{plot_agenda}
+\alias{plot_agenda}
 \title{Visualize a agenda according to an agenda dataset}
 \usage{
-plot.agenda(task, period = 'period', item = 'item',year.cex = 2, month.cex = 1, text.left = TRUE, 
+plot_agenda(task, period = 'period', item = 'item',year.cex = 2, month.cex = 1, text.left = TRUE, 
 		text.cex = 1.2, ...)
 }
 \description{
@@ -30,6 +30,7 @@ d <- data.frame(period = c("2011-4 ~ 2011-4", "2011-5~2011-6", "2011-6~2011-7",
 				"This is the fourth task", "This is the five task", "This is the sixth task", 
 				"This is the seventh task", "This is the eighth task"))
 
+x11(width=7,height=0.6*nrow(d))
 plot.agenda(task=d, period = 'period',item='item',text.cex = 1.5, month.cex = 1.5)
 
 plot.agenda(task=d,  period = 'period',item='item',text.cex = 1.5, month.cex = 1.5, text.left = FALSE) 
