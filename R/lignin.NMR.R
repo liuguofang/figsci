@@ -1,5 +1,5 @@
 
-lignin.NMR <- function(I_low,I_high){
+lignin_NMR <- function(I_low,I_high){
 	# Haw et al 1984
 	I_lig <- (9.92/6)*I_low
 	I_carb <- I_high-(3.92/6)*I_low
