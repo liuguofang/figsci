@@ -1,8 +1,8 @@
-\name{oneway.barplot}
-\alias{oneway.barplot}
+\name{oneway_barplot}
+\alias{oneway_barplot}
 \title{Plot a one-way barplot associated with lowercase representing statically significant difference}
 \usage{
-oneway.barplot(data = data, response = response, x.factor = x.factor, method = 'HSD.test', alpha=0.05, ...)
+oneway_barplot(data = data, response = response, x.factor = x.factor, method = 'HSD.test', alpha=0.05, ...)
 }
 \description{
 The function could be used as plotting a one-way barplot. In addition, the figure will be added lowercase on bars automatically by means of HSD.test function in agricolae package.  
@@ -22,6 +22,6 @@ The function could be used as plotting a one-way barplot. In addition, the figur
 data(leaflife, package='smatr')
 
 par(xpd=TRUE)
-oneway.barplot(data=leaflife,response=lma,x.factor=site)
+oneway_barplot(data=leaflife,response=lma,x.factor=site)
 
 }
