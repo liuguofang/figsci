@@ -1,4 +1,4 @@
-china.map.10segments <- function(pt.dat =NULL,pt.text =NULL, ...){
+chinamap_10segments <- function(pt.dat =NULL,pt.text =NULL, ...){
     library(mapdata)
     library(maps)
     par(mar=rep(0,4),mgp=c(1.2,0.5,0),omi=c(0.1,0.1,0,0))
