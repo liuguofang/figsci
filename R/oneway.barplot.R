@@ -9,7 +9,7 @@
 #' @... futher arguments pass to bargraph.CI
 #' @export
 #' @examples
-oneway.barplot <- function(data = data, response = response, x.factor = x.factor,method = 'HSD.test',alpha = 0.05, ...){
+oneway_barplot <- function(data = data, response = response, x.factor = x.factor,method = 'HSD.test',alpha = 0.05, ...){
 	library(agricolae)
 	x.factor <- eval(substitute(x.factor), envir = data)
 	response <- eval(substitute(response), envir = data)
