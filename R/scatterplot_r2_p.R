@@ -1,4 +1,4 @@
-#' A scatterplot.r2p function
+#' A scatterplot_r2_p function
 #' This function can be used drawing a scatterplot with or without category/group variable and add R2 and P-value for fitted regession lines automatically.
 #' @dat A data.frame 
 #' @x A variable in x axis
@@ -12,7 +12,7 @@
 #' @level.off Whether level is shown or not. 
 #' @examples
 
-scatterplot.r2p <- function (dat, x = x, y = y, group = NULL, color = NULL, 
+scatterplot_r2_p <- function (dat, x = x, y = y, group = NULL, color = NULL, 
 			     pty = NULL, cex.size = 1, cornerlabel = NULL, 
 			     r2.p.pos = c(0.1, 0.95),level.off = FALSE,blank=0, ...) 
 {
