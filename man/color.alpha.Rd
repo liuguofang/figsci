@@ -1,8 +1,8 @@
-\name{color.alpha}
-\alias{color.alpha}
+\name{color_alpha}
+\alias{color_alpha}
 \title{Create a color corresponding to the given intensities}
 \usage{
-color.alpha(color = "red", ...)
+color_alpha(color = "red", ...)
 }
 \description{
 This function could be used as creating a color based on the given intensities of points. 
@@ -14,7 +14,7 @@ This function could be used as creating a color based on the given intensities o
 
 
 \examples{
-color <- color.alpha("blue",alpha=0.25)
+color <- color_alpha("blue",alpha=0.25)
 
 N <- 2000
 x <- rnorm(N,50,5)
