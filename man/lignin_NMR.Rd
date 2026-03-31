@@ -1,8 +1,8 @@
-\name{lignin.NMR}
-\alias{lignin.NMR}
+\name{lignin_NMR}
+\alias{lignin_NMR}
 \title{ Calculate lignin content based on Nuclear Magnetic Resonance (NMR).}
 \usage{
-lignin.NMR(I_low,I_high)
+lignin_NMR(I_low,I_high)
 }
 \description{
  This function can be used to Calculate lignin content based on Nuclear Magnetic Resonance (NMR). Haw J F, Maciel G E, Schroeder H A. Carbon-13 nuclear magnetic resonance spectrometric study of wood and wood pulping with cross polarization and magic-angle spinning[J]. Analytical Chemistry, 1984, 56(8): 1323-1329.}
@@ -11,7 +11,7 @@ lignin.NMR(I_low,I_high)
 	\item{I_high} {112-160 to the high shielding side.}
 }
 \details{
-The method is based on the reference that Haw J F, Maciel G E, Schroeder H A. Carbon-13 nuclear magnetic resonance spectrometric study of wood and wood pulping with cross polarization and magic-angle spinning[J]. Analytical Chemistry, 1984, 56(8): 1323-1329.
+The method is based on the reference that Haw JF, Maciel GE, Schroeder HA. Carbon-13 nuclear magnetic resonance spectrometric study of wood and wood pulping with cross polarization and magic-angle spinning[J]. Analytical Chemistry, 1984, 56(8): 1323-1329.
 }
 
 \examples{
@@ -33,7 +33,7 @@ I_high <- apply(NMR.dat[1:5,-1],2,sum)
 I_low <- apply(NMR.dat[6:7,-1],2,sum)
 parameter <- data.frame(I_low,I_high)
 
-sapply(1:length(parameter),function(i) lignin.NMR(parameter[i,1],parameter[i,2]))
+sapply(1:length(parameter),function(i) lignin_NMR(parameter[i,1],parameter[i,2]))
 ## [1] 0.1968061 0.3279816
 
 apply(NMR.dat[-1],2,sum)
