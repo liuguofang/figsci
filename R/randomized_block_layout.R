@@ -1,4 +1,4 @@
-#' An randomized.block.layout function
+#' An randomized_block_layout function
 #'
 #' This function allows you draw a layout of randomized block experiment design. 
 #' @quadrat.side The side of typical quadrates
@@ -7,7 +7,7 @@
 #' @treatment The number of treatments or treatment combinations 
 #' @outside The outer distance space for experiment setup
 #' @examples
-randomized.block.layout <- function(code.matrix=NULL, quadrat.side = c(2, 2), space = c(2, 2), block = 4, treatment = 9,outside=5,...) {
+randomized_block_layout <- function(code.matrix=NULL, quadrat.side = c(2, 2), space = c(2, 2), block = 4, treatment = 9,outside=5,...) {
     l <- quadrat.side[1] * treatment + space[1] * (treatment - 1)
     w <- quadrat.side[2] * block + space[2] * (block - 1)
     plot(1, xlim = c(-5, l + 5), ylim = c(-5, w + 5), type = "n", 
