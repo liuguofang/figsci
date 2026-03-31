@@ -1,4 +1,4 @@
-draw.colors657 <- function(...) 
+draw_colors657 <- function(...) 
 {
 	myfun <- function(x) {
 		if (756 - x > x)
