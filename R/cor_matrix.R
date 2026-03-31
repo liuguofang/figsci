@@ -1,5 +1,5 @@
 
-cor.matrix <- function(dat,method='pearson'){
+cor_matrix <- function(dat,method='pearson'){
  pvalue2display <- function(p){
       p <- sprintf("%.3f",p)
       for(i in 1:length(p))
