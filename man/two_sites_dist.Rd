@@ -1,8 +1,8 @@
-\name{twopoints.dist}
-\alias{twopoints.dist}
+\name{two_sites_dist}
+\alias{two_sites_dist}
 \title{Calculate the distance between two points on earth}
 \usage{
-twopoints.dist(lat1, lon1, lat2, lon2) 
+two_sites_dist(lat1, lon1, lat2, lon2) 
 }
 \description{
 Calculate the distance between two points on earth.
@@ -10,13 +10,13 @@ Calculate the distance between two points on earth.
 \arguments{
 	\item{lat1} {a latitude value of a point.}
 	\item{lon1} {a longitude value of a point.}
-  \item{lat2} {a latitude value of another point.}
-  \item{lon2} {a latitude value of another point.}
+    \item{lat2} {a latitude value of another point.}
+    \item{lon2} {a latitude value of another point.}
   
 }
 
 
 \examples{
-twopoints.dist(39,110,40,110)
+two_sites_dist(39,110,40,110)
 
 }
