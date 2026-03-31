@@ -1,4 +1,4 @@
-mean.se <- function(data,...) 
+mean_se <- function(data,...) 
 {
 	m.and.se <-function(x,...) sprintf("%.2f±%.2f",mean(x,...),sciplot::se(x,...))
 	
