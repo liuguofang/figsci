@@ -20,7 +20,8 @@ The function could be used as adding events or tasks on the calendar figure (out
 }
 \examples{
 library(TeachingDemos)
-year <- 2026; month <- 3
+year <- 2026
+month <- 3
 cal(year = year, month = month)
 title(main = sprintf("%d-%02d", year, month), out = TRUE, adj = 0, cex = 2)
 dayth <- c(1, 3, 5)
