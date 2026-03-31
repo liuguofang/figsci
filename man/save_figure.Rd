@@ -1,8 +1,8 @@
-\name{save_fig}
-\alias{save_fig}
+\name{save_figure}
+\alias{save_figure}
 \title{Save a tiff, eps and pdf files concurrently after running R code that producs a figure}
 \usage{
-save_fig(fn, width = 6, height = 5, pointsize = 12, res=300)
+save_figure(fn, width = 6, height = 5, pointsize = 12, res=300)
 }
 \description{
 This function can be used to save a tiff file after running R code that producs figure.
@@ -16,6 +16,6 @@ This function can be used to save a tiff file after running R code that producs 
 }
 \examples{
 hist(rnorm(100))
-save_fig("save the figure in terms of tiff, eps, pdf",width=6,height=7,pointsize=12)
+save_figure("save the figure in terms of tiff, eps, pdf",width=6,height=7,pointsize=12)
 	
 }
