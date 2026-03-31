@@ -1,4 +1,4 @@
-twopoints.dist <- function(lat1, lon1, lat2, lon2) {
+two_sites_dist <- function(lat1, lon1, lat2, lon2) {
     # km, earth radius
     R <- 6371 
     radians <- function(x) x/180 * pi
