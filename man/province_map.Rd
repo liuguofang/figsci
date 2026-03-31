@@ -15,7 +15,7 @@ Draw a polygon map based on province name. The function is written in 2013 by Gu
 \examples{
 
 setwd("D:/Analysis and Graphics/data/china's polygon")
-province_map(province='河南')
-province_map(province='内蒙')
+province_map(nation.edge = 'bou2_4p.shp', province='河南')
+province_map(nation.edge = 'bou2_4p.shp', province='内蒙')
 
 }
