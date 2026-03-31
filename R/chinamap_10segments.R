@@ -18,7 +18,7 @@ chinamap_10segments <- function(pt.dat =NULL,pt.text =NULL, ...){
     para=par('usr')
     for(i in 1:length(line10))
       lines(line10[[i]])
-    north.direction(0.7,0.7)
+    north_direction(0.7,0.7)
     
     rect(para[2]-15,0,para[2],32,col='white')
     par(usr=c(50,50+para[2]-para[1],3,3.5+para[4]-para[3]))
