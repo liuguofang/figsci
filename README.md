@@ -31,7 +31,7 @@ multi.p <- twoway_barplot_facet(data=dat2,x.factor='amendment',group='crop',valu
 multi.p
 ```
 
-![](readme_files/figsci cover.png) 
+![](readme_files/figscicover.png) 
 
 
 
