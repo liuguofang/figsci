@@ -1,4 +1,4 @@
-#' A twoway.barplot function
+#' A twoway_barplot function
 #'
 #' This function is used as drawing two-way barplot and adding letters representing significant difference.
 #' @dat Dataframe 
@@ -9,7 +9,7 @@
 #' @maximum  Which is used to modify visualtion on significant letters in figure. 
 #' @export
 #' @examples
-twoway.barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,
+twoway_barplot <-function(dat, x.factor = "x.factor",response = "response", group = "group", method = 'HSD.test', maximum=NULL,
                           minmum=NULL,legend=TRUE, sig.letters=NULL, legend.pos='topright',group.name=group, italic.on=FALSE,...) {
   library(sciplot)
   library(doBy)
