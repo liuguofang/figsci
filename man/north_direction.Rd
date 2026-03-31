@@ -1,8 +1,8 @@
-\name{north.direction}
-\alias{north.direction}
+\name{north_direction}
+\alias{north_direction}
 \title{Create a legend with north direction}
 \usage{
-north.direction(x.change = 0, y.change = 0)
+north_direction(x.change = 0, y.change = 0)
 }
 \description{
 Create a legend with north direction.
@@ -15,6 +15,6 @@ Create a legend with north direction.
 
 \examples{
 plot.new()
-north.direction()
+north_direction()
 
 }
