@@ -1,8 +1,8 @@
-\name{radiate.pie}
-\alias{radiate.pie}
+\name{radiate_pie}
+\alias{radiate_pie}
 \title{Pie plot with radiated labels}
 \usage{
-radiate.pie(x, labels = names(x), edges = 200, radius = 0.8, clockwise = FALSE, 
+radiate_pie(x, labels = names(x), edges = 200, radius = 0.8, clockwise = FALSE, 
 		init.angle = if (clockwise) 90 else 0, density = NULL, angle = 45, 
 		col = NULL, border = NULL, lty = NULL, main = NULL, ...) 
 }
@@ -14,6 +14,6 @@ Pie plot with radiated labels.
 }
 
 \examples{
-radiate.pie(rep(1,80),border=NA)
+radiate_pie(rep(1,80),border=NA)
 
 }
