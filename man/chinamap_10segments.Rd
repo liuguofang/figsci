@@ -1,8 +1,8 @@
-\name{china.map.10segments}
-\alias{china.map.10segments}
+\name{chinamap_10segments}
+\alias{chinamap_10segments}
 \title{Draw a China map with 10 segments on islands of Southern Sea.}
 \usage{
-china.map.10segments(pt.dat =NULL,pt.text =NULL, ...)
+chinamap_10segments(pt.dat =NULL,pt.text =NULL, ...)
 }
 \description{
 Draw a China map with 10 segments on islands of Southern Sea. The sample points can be added accordingly. 
@@ -18,7 +18,7 @@ d <- data.frame(Num = 1:16, lat = c(44.77098, 40.34072, 37.2527,  40.78697, 43.7
 29.5079, 33.0862, 33.0611, 33.9185, 24.9229, 26.6119), lon = c(83.32768, 93.76375, 96.8524, 108.71257, 116.68443, 123.02628, 115.8346, 
 115.5831, 116.6581, 117.3761, 112.8241, 111.0667, 107.1358, 102.8114, 102.7242, 118.8864))
 
-china.map.10segments(pt.dat=d[,2:3])
-china.map.10segments(pt.dat=d[,3:2],pch=21,bg='gray')
-china.map.10segments(pt.dat=d[,3:2],pt.text=1:16,pch=21,bg='gray',pos=3)
+chinamap_10segments(pt.dat=d[,2:3])
+chinamap_10segments(pt.dat=d[,3:2],pch=21,bg='gray')
+chinamap_10segments(pt.dat=d[,3:2],pt.text=1:16,pch=21,bg='gray',pos=3)
 }
