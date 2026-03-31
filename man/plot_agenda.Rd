@@ -31,8 +31,8 @@ d <- data.frame(period = c("2011-4 ~ 2011-4", "2011-5~2011-6", "2011-6~2011-7",
 				"This is the seventh task", "This is the eighth task"))
 
 x11(width=7,height=0.6*nrow(d))
-plot.agenda(task=d, period = 'period',item='item',text.cex = 1.5, month.cex = 1.5)
+plot_agenda(task=d, period = 'period',item='item',text.cex = 1.5, month.cex = 1.5)
 
-plot.agenda(task=d,  period = 'period',item='item',text.cex = 1.5, month.cex = 1.5, text.left = FALSE) 
+plot_agenda(task=d,  period = 'period',item='item',text.cex = 1.5, month.cex = 1.5, text.left = FALSE) 
 
 }
