@@ -1,8 +1,8 @@
-\name{freq.hist}
-\alias{freq.hist}
+\name{freq_hist}
+\alias{freq_hist}
 \title{Plot a histogram with frequence curve}
 \usage{
-freq.hist(dat = NULL, bins = 10)
+freq_hist(dat = NULL, bins = 10)
 }
 \description{
 This function can be used to plot a histogram with frequence curve.
