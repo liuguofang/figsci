@@ -20,12 +20,18 @@ devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please repl
 
 The `scatterplot.r2p` function can make a scatterplot with R<sup>2</sup> and p value for ordinary linear regressions.
 ```r
-data(leaflife,package='smatr')
-scatterplot.r2p(dat=leaflife,x='longev',y='lma',group='soilp',pty=c(1,19),
-                xlab=Leaf~longevity~(yr),ylab=~LMA~(kg~m^-2))
+data(Chz2006,package='agricolae')
+dat <- Chz2006$yield
+p1 <- twoway_barplot_facet(data=dat,x.factor='amendment',group='crop',value='health')
+p1
+library(reshape)
+dat2 <- melt(dat,id.vars=c("amendment", "crop", "block"))
+multi.p <- twoway_barplot_facet(data=dat2,x.factor='amendment',group='crop',value='value',
+    facet_row='variable',scale='free_y')
+multi.p
 ```
 
-![](readme_files/scatterplot.jpg) 
+![](readme_files/figsci cover.png) 
 
 
 
