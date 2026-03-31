@@ -5,7 +5,7 @@
 pdftopng(pdf.pos, pdftopng.pos, resolution=250, full.page = FALSE)
 }
 \description{
-This function can be used to transoform the cover page of pdf files into png files.  
+This function can be used to transoform the cover page of pdf files into png files by calling the xpdfbin-win-3.04 software.  
 }
 
 \arguments{
