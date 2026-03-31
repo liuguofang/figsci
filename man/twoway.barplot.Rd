@@ -1,8 +1,8 @@
-\name{twoway.barplot}
-\alias{twoway.barplot}
+\name{twoway_barplot}
+\alias{twoway_barplot}
 \title{Draw a two-way barplot and add significant letters onto the bars automatically}
 \usage{
-twoway.barplot(dat, x.factor = "x.factor",  response = "response", group = "group", method = 'HSD.test',maximum=NULL, minmum=NULL, legend=TRUE, sig.letters=NULL, legend.pos='topright',group.name=group,italic.on=FALSE, ...)
+twoway_barplot(dat, x.factor = "x.factor",  response = "response", group = "group", method = 'HSD.test',maximum=NULL, minmum=NULL, legend=TRUE, sig.letters=NULL, legend.pos='topright',group.name=group,italic.on=FALSE, ...)
 }
 \description{
 The function could be used as drawing two-way barplot and adding letters representing significant difference automatically. Same uppercase and lowercase denote non-significant difference between factor levels (x axis) for each of group levels and between group levels (group) for each of factor levels (x axis). }
@@ -25,13 +25,13 @@ The function could be used as drawing two-way barplot and adding letters represe
 
 \examples{
 data(leaflife, package = 'smatr')
-twoway.barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma')
+twoway_barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma')
 
-twoway.barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma',xlab='Rainfall', ylab=~LMA~(kg~m^-2))
+twoway_barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma',xlab='Rainfall', ylab=~LMA~(kg~m^-2))
 
-twoway.barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma',xlab='Rainfall', ylab=~LMA~(kg~m^-2),italic.on=TRUE)
+twoway_barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma',xlab='Rainfall', ylab=~LMA~(kg~m^-2),italic.on=TRUE)
 
-twoway.barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma',group.name='Soil P',
+twoway_barplot(dat=leaflife,x.factor='rain',group='soilp',response='lma',group.name='Soil P',
 	       xlab='Rainfall', ylab=~LMA~(kg~m^-2))
 
 }
