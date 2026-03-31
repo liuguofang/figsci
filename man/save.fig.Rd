@@ -1,8 +1,8 @@
-\name{save.fig}
-\alias{save.fig}
+\name{save_fig}
+\alias{save_fig}
 \title{Save a tiff, eps and pdf files concurrently after running R code that producs a figure}
 \usage{
-save.fig(fn, width = 6, height = 5, pointsize = 12, res=300)
+save_fig(fn, width = 6, height = 5, pointsize = 12, res=300)
 }
 \description{
 This function can be used to save a tiff file after running R code that producs figure.
@@ -17,6 +17,6 @@ This function can be used to save a tiff file after running R code that producs 
 \examples{
 # 例子
 plot(rnorm(100))
-save.fig("同时保存tiff、eps、pdf格式的图",width=6,height=7,pointsize=12)
+save_fig("同时保存tiff、eps、pdf格式的图",width=6,height=7,pointsize=12)
 	
 }
