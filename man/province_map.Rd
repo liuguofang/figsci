@@ -1,8 +1,8 @@
-\name{province.map}
-\alias{province.map}
+\name{province_map}
+\alias{province_map}
 \title{Draw a polygon map based on province name}
 \usage{
-provincemap(province='北京',...)
+ province_map(nation.edge = 'bou2_4p.shp', province = '北京',...)
 }
 \description{
 Draw a polygon map based on province name. The function is written in 2013 by Guofang Liu.
@@ -14,8 +14,8 @@ Draw a polygon map based on province name. The function is written in 2013 by Gu
 
 \examples{
 
-setwd("E:/3R/2data/china's polygon")
-province.map(province='河南')
-province.map(province='内蒙')
+setwd("D:/Analysis and Graphics/data/china's polygon")
+province_map(province='河南')
+province_map(province='内蒙')
 
 }
