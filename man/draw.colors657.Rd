@@ -1,12 +1,12 @@
 
-\name{draw.colors657}
-\alias{draw.colors657}
-\title{Draw colors()}
+\name{draw_colors657}
+\alias{draw_colors657}
+\title{The function displays and labels all 657 built-in R colors in a grid layout.}
 \usage{
-draw.colors657(...) 
+draw_colors657(...) 
 }
 \description{
-Calculate the distance between two points on earth.
+The function displays and labels all 657 built-in R colors in a grid layout
 }
 \arguments{
 	\item{...} {further argument pass to plot function.}
@@ -15,6 +15,6 @@ Calculate the distance between two points on earth.
 
 
 \examples{
-draw.colors657() 
+draw_colors657() 
 
 }
