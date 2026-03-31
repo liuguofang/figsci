@@ -18,20 +18,24 @@ If it doesn't work, you downloaded the zip file (you will see the green button "
 devtools::install("C:\\Users\\liuguofang\\Desktop\\figsci-master") # please replace your own file path. 
 ```
 
-The `scatterplot.r2p` function can make a scatterplot with R<sup>2</sup> and p value for ordinary linear regressions.
+The `twoway_barplot_facet` function can draw two-way bar plot(s) with or without facet function used in ggplot2 and add the uppercase and lowercase representing significant differene between groups or between x.factors.
+
 ```r
 data(Chz2006,package='agricolae')
 dat <- Chz2006$yield
 p1 <- twoway_barplot_facet(data=dat,x.factor='amendment',group='crop',value='health')
-p1
+p1 + theme(legend.position = c(0.1, 0.9), legend.background = element_blank())
+```
+![](readme_files/figscicover1.png)
+
+```r
 library(reshape)
 dat2 <- melt(dat,id.vars=c("amendment", "crop", "block"))
 multi.p <- twoway_barplot_facet(data=dat2,x.factor='amendment',group='crop',value='value',
     facet_row='variable',scale='free_y')
 multi.p
 ```
-
-![](readme_files/figscicover.png) 
+![](readme_files/figscicover2.png) 
 
 
 
