@@ -1,9 +1,9 @@
-\name{month.cal.agenda}
-\alias{month.cal.agenda}
+\name{month_cal_agenda}
+\alias{month_cal_agenda}
 \title{Add events or tasks on monthly calendar figure automatically
 }
 \usage{
-month.cal.agenda(month =NULL, year = NULL, dayth, work, bg.col = "gray", ...) 
+month_cal_agenda(month =NULL, year = NULL, dayth, work, bg.col = "gray", ...) 
 }
 \description{
 The function could be used as adding events or tasks on the calendar figure (output by cal function in TeachingDemos pacakge) automatically. 
@@ -21,8 +21,9 @@ The function could be used as adding events or tasks on the calendar figure (out
 }
 \examples{
 library(TeachingDemos)
-cal()
+year=2026; month=3
+cal(year=year,month=month)
+title(main = sprintf("%d-%02d", year, month),out=T,adj=0,cex=2)
 month.cal.agenda(dayth = c(1, 3, 5), work = c("Work","Playing games\n outside.",
 	"Go to field"), cex = 1.2, xpd = TRUE) 
-
 }
